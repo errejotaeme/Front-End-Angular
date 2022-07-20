@@ -9,7 +9,6 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { ConocimientosComponent } from './components/conocimientos/conocimientos.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
-import { DesplazamientoComponent } from './components/desplazamiento/desplazamiento.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +19,10 @@ import { DesplazamientoComponent } from './components/desplazamiento/desplazamie
     ExperienciaComponent,
     EducacionComponent,
     ConocimientosComponent,
-    ProyectosComponent,
-    DesplazamientoComponent
+    ProyectosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
