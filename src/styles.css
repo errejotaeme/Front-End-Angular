@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/*Modo color*/
+
+body {
+  color: #222;
+  background-color: #fff;
+}
+
+body.tema-oscuro {
+  color: #fff;
+  background-color: #222;
+}
+
+/*Imagenes*/
+
+.logo-ap {
+  width: 100px;
+  height: auto;
+  transition-duration: 0.6s;
+}
+
+.logo-ap:hover {
+  filter: opacity(50%);
+}

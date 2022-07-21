@@ -12,4 +12,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  alternarTemaColor(){
+    document.body.classList.toggle('tema-oscuro');
+  }
+
 }
