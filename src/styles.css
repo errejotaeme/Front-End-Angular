@@ -2,7 +2,7 @@
 
 body {
   color: #222;
-  background-color: #fff;
+  background-color: rgb(236, 233, 233);
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -23,6 +23,15 @@ body.tema-oscuro {
   filter: opacity(50%);
 }
 
+.img-invertida {
+  filter:invert(1);
+}
+
+
+/*botones*/
 .boton{
-  font-size: 0.7em !important;
+  font-size: 0.6em !important;
+  font-weight: bold !important;
+  letter-spacing: 0.1em !important;
+
 }
