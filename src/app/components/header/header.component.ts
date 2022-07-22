@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
   }
 
+  tema: boolean = false;
   alternarTemaColor(){
-    document.body.classList.toggle('tema-oscuro');
-  }
+     if(this.tema == false){
+    this.renderer.addClass(document.body, 'tema-oscuro');
+     }else{
+      this.renderer.removeClass(document.body, 'tema-oscuro');
+     }
+    this.tema = !this.tema;
+    }
+
+
 
 }

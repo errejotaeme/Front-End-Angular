@@ -3,6 +3,7 @@
 body {
   color: #222;
   background-color: #fff;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 body.tema-oscuro {
@@ -20,4 +21,8 @@ body.tema-oscuro {
 
 .logo-ap:hover {
   filter: opacity(50%);
+}
+
+.boton{
+  font-size: 0.7em !important;
 }
