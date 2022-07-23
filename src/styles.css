@@ -14,8 +14,8 @@ body.tema-oscuro {
 /*Imagenes*/
 
 .logo-ap {
-  width: 100px;
-  height: auto;
+  width: auto;
+  height: 2.5em;
   transition-duration: 0.6s;
 }
 
@@ -33,5 +33,11 @@ body.tema-oscuro {
   font-size: 0.6em !important;
   font-weight: bold !important;
   letter-spacing: 0.1em !important;
-
 }
+
+
+/*Secciones*/
+.encabezado {
+  margin-top:1em;
+  display: grid;
+  grid-template-columns: 70% 1fr 1fr;}
