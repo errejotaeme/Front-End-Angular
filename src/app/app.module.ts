@@ -10,6 +10,10 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { ConocimientosComponent } from './components/conocimientos/conocimientos.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { BotonComponent } from './components/boton/boton.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CompletoComponent } from './components/completo/completo.component';
+
+
 
 @NgModule({
   declarations: [
@@ -21,10 +25,12 @@ import { BotonComponent } from './components/boton/boton.component';
     EducacionComponent,
     ConocimientosComponent,
     ProyectosComponent,
-    BotonComponent
+    BotonComponent,
+    CompletoComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
