@@ -12,6 +12,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { BotonComponent } from './components/boton/boton.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CompletoComponent } from './components/completo/completo.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -30,7 +31,8 @@ import { CompletoComponent } from './components/completo/completo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
