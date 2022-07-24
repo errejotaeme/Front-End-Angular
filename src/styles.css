@@ -1,13 +1,13 @@
 /*Modo color*/
 
 body {
-  color: #222;
+  color: rgb(22, 22, 22);
   background-color: rgb(236, 233, 233);
 }
 
 body.tema-oscuro {
   color: #fff;
-  background-color: #222;
+  background-color: rgb(22, 22, 22);
 }
 
 /*Imagenes*/
@@ -18,9 +18,12 @@ body.tema-oscuro {
   transition-duration: 0.6s;
 }
 
-
 .img-invertida {
   filter:invert(1);
+}
+
+.banner{
+  margin-bottom:1em;
 }
 
 
@@ -31,13 +34,13 @@ body.tema-oscuro {
   letter-spacing: 0.1em !important;
   font-weight: bolder !important;
   white-space: nowrap !important;
-  color:rgb(221, 106, 77) !important;
-  border: 1px solid rgb(221, 106, 77) !important;
+  color:rgb(42, 207, 92) !important;
+  border: 1px solid rgb(42, 207, 92)!important;
 }
 
 .boton:hover{
-  color:rgb(153, 73, 55) !important;
-  border: 1px solid rgb(153, 73, 55) !important;
+  color:rgb(19, 94, 41)  !important;
+  border: 1px solid rgb(19, 94, 41)  !important;
 }
 
 .lista-menu {
@@ -48,32 +51,25 @@ body.tema-oscuro {
 }
 
 .enlace-menu {
-  background-color: rgb(221, 106, 77);
+  background-color: rgb(42, 207, 92, 0.5);
   width:fit-content;
   padding:0.1em 0.7em;
   margin-bottom: 0.5em;
-  border-bottom-left-radius: 0.7em;
+  border-bottom-left-radius: 1em;
 }
 
 .texto-menu {
  color: inherit;
  text-decoration: none;
- font-size: 1.7em !important;
+ font-size: 3.3vw !important;
  font-weight: bold;
  letter-spacing: 0.2em;
  vertical-align: middle;
  user-select: none;
 }
 
-@media only screen and (max-width: 766px) {
-  .texto-menu {
-    font-size: 0.7em !important;
-   }
-}
-
-
 .texto-menu:hover {
-  color:rgb(153, 73, 55);
+  color:rgb(19, 94, 41) ;
 }
 
 
@@ -89,17 +85,61 @@ body.tema-oscuro {
 }
 .item2{
   grid-area: 1/1/2/2;
-  position: relative;
+  position: fixed;
+  height:fit-content;
+  right:0;
+  margin-top:47vh;
+}
+@media only screen and (orientation: landscape) {
+  .item2{
+    margin-top: 15vh;
+  }
+}
+
+item3 {
+  grid-area: 2/1/3/2;
 }
 
 .encabezado {
   margin-top:0.7em;
   margin-bottom: 1em;
   display: grid;
-  grid-template-columns: 70% 1fr 1fr;}
+  grid-template-columns: 70% 1fr 1fr;
+}
 
-  .navegacion {
-    width:fit-content;
-    float:right;
-    margin-top:25vh;
-  }
+.seccion{
+  min-height: 50vh;
+}
+
+.nombre {
+  font-variant: small-caps;
+  font-weight: lighter;
+  letter-spacing: 0.3vw;
+  font-size: 2.5vw;
+  margin-top: 1vw;
+}
+
+.titulo{
+  font-family: serif;
+  font-weight: bolder;
+  font-style: oblique;
+  font-size: 3.5vw;
+  margin-top: 1vw;
+  margin-bottom: 3vw;
+}
+
+.titulo-seccion {
+  margin-top:2vw;
+  margin-bottom: 1vw;
+  letter-spacing: 0.1vw;
+  font-weight: bold;
+  font-size: 3vw;
+}
+
+.campo{
+  font-size: 2.5vw;
+  text-decoration: underline;
+}
+.contenido{
+  font-size: 2.3vw;
+}

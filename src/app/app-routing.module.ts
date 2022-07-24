@@ -15,6 +15,7 @@ const rutas:Routes = [
   {path:'proyectos', component: ProyectosComponent},
   {path:'completo', component: CompletoComponent}
 ]
+
 @NgModule({
 
   imports: [RouterModule.forRoot(rutas)],
