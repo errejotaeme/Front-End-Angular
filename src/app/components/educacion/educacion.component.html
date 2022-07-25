@@ -1,4 +1,13 @@
 <div class="container seccion">
       <h2 class="titulo-seccion">EDUCACION</h2>
-      <p class="contenido">Educacion, ceritficdos, etc.</p>
+      <ul>
+        <li *ngFor="let educacion of educacionLista">
+          <span class="campo">Institución:</span><p class="contenido">{{educacion.escuela}}</p>
+          <span class="campo">Título/Curso:</span><p class="contenido">{{educacion.titulo}}</p>
+          <span class="campo">Descripción:</span><p class="contenido">{{educacion.comentario}}</p>
+          <span class="campo">Fecha de inicio:</span><p class="contenido">{{educacion.inicio}}</p>
+          <span class="campo">Finalizado:</span><p class="contenido">{{educacion.fin}}</p>
+        </li>
+      </ul>
+
 </div>

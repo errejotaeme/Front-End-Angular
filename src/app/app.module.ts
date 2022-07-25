@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -10,8 +12,8 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { ConocimientosComponent } from './components/conocimientos/conocimientos.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { BotonComponent } from './components/boton/boton.component';
-import { AppRoutingModule } from './app-routing.module';
 import { CompletoComponent } from './components/completo/completo.component';
+import { PortfolioService } from './servicios/portfolio.service';
 
 
 
@@ -31,8 +33,9 @@ import { CompletoComponent } from './components/completo/completo.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PortfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,13 @@
 <div class="container seccion">
   <h2 class="titulo-seccion">EXPERIENCIA LABORAL</h2>
-  <p class="contenido">Lista de trabajos traida desde el JSON</p>
+  <ul>
+    <li *ngFor="let experiencia of experienciaLista">
+      <span class="campo">Puesto:</span><p class="contenido">{{experiencia.posicion}}</p>
+      <span class="campo">Empresa:</span><p class="contenido">{{experiencia.empresa}}</p>
+      <span class="campo">Tareas:</span><p class="contenido">{{experiencia.tareas}}</p>
+      <span class="campo">Modalidad:</span><p class="contenido">{{experiencia.modalidad}}</p>
+      <span class="campo">Desde:</span><p class="contenido">{{experiencia.inicio}}</p>
+      <span class="campo">Hasta:</span><p class="contenido">{{experiencia.fin}}</p>
+    </li>
+  </ul>
 </div>

@@ -1,4 +1,9 @@
 <div class="container seccion">
       <h2 class="titulo-seccion">CONOCIMIENTOS</h2>
-      <p class="contenido">Barras de progreso circular</p>
+      <ul>
+        <li *ngFor="let conocimientos of misConocimientos">
+          <span class="campo">Nombre:</span><p class="contenido">{{conocimientos.nombre}}</p>
+          <span class="campo">Porcentaje:</span><p class="contenido">{{conocimientos.progreso}}</p>
+        </li>
+      </ul>
 </div>

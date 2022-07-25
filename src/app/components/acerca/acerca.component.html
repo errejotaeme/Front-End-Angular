@@ -1,12 +1,12 @@
 <div class="container seccion">
   <img
-  src="../../assets/imagenes/banner.png"
+  [src]="miPortfolio.banner"
   alt="Banner"
   class="banner img-fluid">
 
-  <h3 class="nombre">Juan Manuel Rodríguez Miguel</h3>
-  <h2 class="titulo">Full Stack Developer Jr</h2>
-  <span class="campo">SOBRE MI</span>
-  <p class="contenido">Breve descripción personal traída desde un JSON.</p>
+  <h3 class="nombre">{{miPortfolio.nombre}}</h3>
+  <h2 class="titulo">{{miPortfolio.titulo}}</h2>
+  <span class="campo">SOBRE MI:</span>
+  <p class="contenido">{{miPortfolio.descripcion}}</p>
 
 </div>

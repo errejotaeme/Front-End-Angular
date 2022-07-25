@@ -23,7 +23,7 @@ body.tema-oscuro {
 }
 
 .banner{
-  margin-bottom:1em;
+  margin-bottom:1vw;
 }
 
 
@@ -53,17 +53,17 @@ body.tema-oscuro {
 .enlace-menu {
   background-color: rgb(42, 207, 92, 0.5);
   width:fit-content;
-  padding:0.1em 0.7em;
-  margin-bottom: 0.5em;
-  border-bottom-left-radius: 1em;
+  padding:0.2vw 2vw;
+  margin-bottom: 1vw;
+  border-bottom-left-radius: 1vw;
 }
 
 .texto-menu {
  color: inherit;
  text-decoration: none;
- font-size: 3.3vw !important;
+ font-size: 2.5vw !important;
  font-weight: bold;
- letter-spacing: 0.2em;
+ letter-spacing: 0.2vw;
  vertical-align: middle;
  user-select: none;
 }
@@ -101,8 +101,8 @@ item3 {
 }
 
 .encabezado {
-  margin-top:0.7em;
-  margin-bottom: 1em;
+  margin-top:0.7vw;
+  margin-bottom: 1vw;
   display: grid;
   grid-template-columns: 70% 1fr 1fr;
 }
@@ -121,7 +121,7 @@ item3 {
 
 .titulo{
   font-family: serif;
-  font-weight: bolder;
+  font-weight: bold;
   font-style: oblique;
   font-size: 3.5vw;
   margin-top: 1vw;
@@ -138,7 +138,8 @@ item3 {
 
 .campo{
   font-size: 2.5vw;
-  text-decoration: underline;
+  font-weight: bold;
+  letter-spacing: 0.1vw;
 }
 .contenido{
   font-size: 2.3vw;
