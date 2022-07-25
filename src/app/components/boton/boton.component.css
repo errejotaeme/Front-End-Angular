@@ -1,13 +1,13 @@
-.boton{
+.boton-header{
   font-size: 0.6em !important;
   letter-spacing: 0.1em !important;
   font-weight: bolder !important;
   white-space: nowrap !important;
-  color:rgb(42, 207, 92) !important;
-  border: 1px solid rgb(42, 207, 92)!important;
+  color:rgb(255, 172, 18) !important;
+  border: 1px solid rgb(255, 172, 18) !important;
 }
 
-.boton:hover{
-  color:rgb(19, 94, 41)  !important;
-  border: 1px solid rgb(19, 94, 41)  !important;
+.boton-header:hover{
+  color:rgb(202, 137, 17) !important;
+  border: 1px solid rgb(202, 137, 17) !important;
 }

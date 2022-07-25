@@ -1,6 +1,7 @@
 <button
-  class="btn boton"
+  class="btn"
+  [ngClass]=[claseBoton]
   (click)= "onClick()">
   <span>{{texto}}</span>
-  <i class="fas fa-lightbulb"></i>
+  <i [ngClass]=[icono]></i>
 </button>

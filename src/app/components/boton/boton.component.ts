@@ -6,9 +6,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./boton.component.css']
 })
 export class BotonComponent implements OnInit {
+  @Input() claseBoton: string = "";
   @Input() texto: string = "";
-  @Input() color: string = "";
   @Output() btnClick = new EventEmitter();
+  @Input() icono: string = "";
 
 
   constructor() { }

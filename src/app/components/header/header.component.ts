@@ -9,15 +9,15 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-
+  tema: boolean = false;
+  clase: string = "";
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
   }
 
-  tema: boolean = false;
-  clase: string = "";
+
   alternarTemaColor(){
      if(this.tema == false){
     this.renderer.addClass(document.body, 'tema-oscuro');
@@ -29,8 +29,8 @@ export class HeaderComponent implements OnInit {
     this.tema = !this.tema;
     }
 
-
-
-
+  pruebaLogin(){
+    console.log("Hice clic en login")
+  }
 
 }

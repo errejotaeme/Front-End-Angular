@@ -1,16 +1,24 @@
 <div class="container encabezado">
+
   <img
-  src="../../assets/imagenes/logo_ap.png"
-  alt="logo argentina programa"
-  class="logo-ap"
-  [ngClass]="clase"
+    src="../../assets/imagenes/logo_ap.png"
+    alt="logo argentina programa"
+    class="logo-ap"
+    [ngClass]="clase"
   >
 
   <app-boton
-  (btnClick)="alternarTemaColor()"
-  texto="TEMA"
+    claseBoton="boton-header"
+    (btnClick)="alternarTemaColor()"
+    texto="TEMA "
+    icono="fas fa-lightbulb"
   ></app-boton>
 
-  <i class="fa-solid fa-right-to-bracket"></i>
+  <app-boton
+    claseBoton="boton-header"
+    (btnClick)="pruebaLogin()"
+    texto="LOGIN "
+    icono="fa-solid fa-right-to-bracket"
+  ></app-boton>
 
 </div>
