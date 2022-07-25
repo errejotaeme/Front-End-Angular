@@ -1,1 +1,13 @@
+.boton{
+  font-size: 0.6em !important;
+  letter-spacing: 0.1em !important;
+  font-weight: bolder !important;
+  white-space: nowrap !important;
+  color:rgb(42, 207, 92) !important;
+  border: 1px solid rgb(42, 207, 92)!important;
+}
 
+.boton:hover{
+  color:rgb(19, 94, 41)  !important;
+  border: 1px solid rgb(19, 94, 41)  !important;
+}
