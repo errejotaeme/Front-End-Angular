@@ -2,11 +2,19 @@
       <h2 class="titulo-seccion">EDUCACION</h2>
       <ul>
         <li *ngFor="let educacion of educacionLista">
-          <span class="campo">Institución:</span><p class="contenido">{{educacion.escuela}}</p>
-          <span class="campo">Título/Curso:</span><p class="contenido">{{educacion.titulo}}</p>
-          <span class="campo">Descripción:</span><p class="contenido">{{educacion.comentario}}</p>
-          <span class="campo">Fecha de inicio:</span><p class="contenido">{{educacion.inicio}}</p>
-          <span class="campo">Finalizado:</span><p class="contenido">{{educacion.fin}}</p>
+          <div class="caja-edicion">
+            <app-boton
+              *ngIf="logeado"
+              claseBoton="boton-edicion"
+              (btnClick)="editar()"
+              icono="fas fa-pencil-alt">
+            </app-boton>
+            <span class="campo">Institución:</span><p class="contenido">{{educacion.escuela}}</p>
+            <span class="campo">Título/Curso:</span><p class="contenido">{{educacion.titulo}}</p>
+            <span class="campo">Descripción:</span><p class="contenido">{{educacion.comentario}}</p>
+            <span class="campo">Fecha de inicio:</span><p class="contenido">{{educacion.inicio}}</p>
+            <span class="campo">Finalizado:</span><p class="contenido">{{educacion.fin}}</p>
+          </div>
         </li>
       </ul>
 

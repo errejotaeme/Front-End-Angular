@@ -11,3 +11,10 @@
   color:rgb(202, 137, 17) !important;
   border: 1px solid rgb(202, 137, 17) !important;
 }
+
+.boton-edicion {
+  display:block;
+  font-size: 1.5vw;
+  color:rgb(55, 255, 37);
+  border:none;
+}

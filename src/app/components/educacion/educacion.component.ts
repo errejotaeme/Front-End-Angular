@@ -8,6 +8,9 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EducacionComponent implements OnInit {
 
+  //debe tomar el valor que me retorne el servicio que controla inicio sesion
+  logeado:boolean=true;
+
   educacionLista:any;
 
   constructor(private datosPortfolio: PortfolioService) { }
@@ -17,5 +20,10 @@ export class EducacionComponent implements OnInit {
       this.educacionLista=data.educacion;
     });
   }
+
+  editar(){
+    console.log("Abro modal de edicion")
+  }
+
 
 }
