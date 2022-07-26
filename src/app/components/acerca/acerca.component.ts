@@ -10,13 +10,14 @@ export class AcercaComponent implements OnInit {
 
   //debe tomar el valor que me retorne el servicio que controla inicio sesion
   logeado:boolean=true;
-  miPortfolio:any;
+
+  datosPersona:any;
 
   constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.miPortfolio=data;
+      this.datosPersona=data.persona;
     });
   }
 

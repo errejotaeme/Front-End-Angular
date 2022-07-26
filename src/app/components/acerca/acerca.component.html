@@ -1,4 +1,4 @@
-<div class="container seccion">
+<div *ngFor="let persona of datosPersona" class="container seccion">
 
 
   <div class="caja-edicion">
@@ -10,7 +10,7 @@
     </app-boton>
 
     <img
-      [src]="miPortfolio.banner"
+      [src]="persona.banner"
       alt="Banner"
       class="banner img-fluid"
     >
@@ -23,7 +23,7 @@
       (btnClick)="editar()"
       icono="fas fa-pencil-alt">
     </app-boton>
-    <h3 class="nombre">{{miPortfolio.nombre}}</h3>
+    <h3 class="nombre">{{persona.nombre}}</h3>
   </div>
 
   <div class="caja-edicion">
@@ -33,7 +33,7 @@
       (btnClick)="editar()"
       icono="fas fa-pencil-alt">
     </app-boton>
-    <h2 class="titulo">{{miPortfolio.titulo}}</h2>
+    <h2 class="titulo">{{persona.titulo}}</h2>
   </div>
 
   <span class="campo">SOBRE MI:</span>
@@ -44,7 +44,7 @@
       (btnClick)="editar()"
       icono="fas fa-pencil-alt">
     </app-boton>
-    <p class="contenido">{{miPortfolio.descripcion}}</p>
+    <p class="contenido">{{persona.descripcion}}</p>
   </div>
 
 </div>
