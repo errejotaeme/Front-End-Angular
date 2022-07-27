@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Persona } from 'src/app/interfaces/persona';
 
 @Component({
   selector: 'app-acerca',
@@ -11,7 +12,7 @@ export class AcercaComponent implements OnInit {
   //debe tomar el valor que me retorne el servicio que controla inicio sesion
   logeado:boolean=true;
 
-  datosPersona:any;
+  datosPersona:Persona[] = [];
 
   constructor(private datosPortfolio: PortfolioService) { }
 

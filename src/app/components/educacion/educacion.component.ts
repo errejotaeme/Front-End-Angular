@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Educacion } from 'src/app/interfaces/educacion';
 
 @Component({
   selector: 'app-educacion',
@@ -8,10 +9,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EducacionComponent implements OnInit {
 
-  //debe tomar el valor que me retorne el servicio que controla inicio sesion
-  logeado:boolean=true;
-
-  educacionLista:any;
+  educacionLista:Educacion[] = [];
 
   constructor(private datosPortfolio: PortfolioService) { }
 
@@ -21,9 +19,6 @@ export class EducacionComponent implements OnInit {
     });
   }
 
-  editar(){
-    console.log("Abro modal de edicion")
-  }
-
+  agregarRegistro(){}
 
 }

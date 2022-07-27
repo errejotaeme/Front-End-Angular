@@ -1,25 +1,16 @@
 <div class="container seccion">
   <h2 class="titulo-seccion">EXPERIENCIA LABORAL</h2>
-  <ul>
-    <li *ngFor="let experiencia of experienciaLista">
+  <app-boton
+    claseBoton="boton-agregar"
+    (btnClick)="agregarRegistro()"
+    texto=""
+    icono="fas fa-plus"
+  ></app-boton>
 
-      <div class="caja-edicion">
 
-        <app-boton
-          *ngIf="logeado"
-          claseBoton="boton-edicion"
-          (btnClick)="editar()"
-          icono="fas fa-pencil-alt">
-        </app-boton>
+    <app-experiencia-item
+      *ngFor="let experiencia of experienciaLista, let i = index"
+      [experiencia]="experiencia"
+    ></app-experiencia-item>
 
-        <span class="campo">Puesto:</span><p class="contenido">{{experiencia.posicion}}</p>
-        <span class="campo">Empresa:</span><p class="contenido">{{experiencia.empresa}}</p>
-        <span class="campo">Tareas:</span><p class="contenido">{{experiencia.tareas}}</p>
-        <span class="campo">Modalidad:</span><p class="contenido">{{experiencia.modalidad}}</p>
-        <span class="campo">Desde:</span><p class="contenido">{{experiencia.inicio}}</p>
-        <span class="campo">Hasta:</span><p class="contenido">{{experiencia.fin}}</p>
-      </div>
-
-    </li>
-  </ul>
 </div>

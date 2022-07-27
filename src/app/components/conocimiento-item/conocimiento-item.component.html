@@ -1,0 +1,15 @@
+<div class="caja-edicion">
+
+  <app-boton
+    *ngIf="logeado"
+    claseBoton="boton-edicion"
+    (btnClick)="editar()"
+    icono="fas fa-pencil-alt">
+  </app-boton>
+
+  <span class="campo">Nombre:</span>
+  <p class="contenido">{{conocimiento.nombre}}</p>
+  <span class="campo">Porcentaje:</span>
+  <p class="contenido">{{conocimiento.progreso}}</p>
+
+</div>

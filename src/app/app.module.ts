@@ -8,8 +8,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { AcercaComponent } from './components/acerca/acerca.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { ExperienciaItemComponent } from './components/experiencia-item/experiencia-item.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
+import { EducacionItemComponent } from './components/educacion-item/educacion-item.component';
 import { ConocimientosComponent } from './components/conocimientos/conocimientos.component';
+import { ConocimientoItemComponent } from './components/conocimiento-item/conocimiento-item.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { BotonComponent } from './components/boton/boton.component';
 import { CompletoComponent } from './components/completo/completo.component';
@@ -28,7 +31,10 @@ import { PortfolioService } from './servicios/portfolio.service';
     ConocimientosComponent,
     ProyectosComponent,
     BotonComponent,
-    CompletoComponent
+    CompletoComponent,
+    EducacionItemComponent,
+    ExperienciaItemComponent,
+    ConocimientoItemComponent
   ],
   imports: [
     BrowserModule,

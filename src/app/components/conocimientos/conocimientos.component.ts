@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Conocimiento } from 'src/app/interfaces/conocimiento';
 
 
 @Component({
@@ -9,10 +10,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ConocimientosComponent implements OnInit {
 
-  //debe tomar el valor que me retorne el servicio que controla inicio sesion
-  logeado:boolean=true;
+  conocimientosLista:Conocimiento[] = [];
 
-  conocimientosLista:any;
   constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
@@ -21,8 +20,6 @@ export class ConocimientosComponent implements OnInit {
     });
   }
 
-  editar(){
-    console.log("Abro modal de edicion")
-  }
+  agregarRegistro(){}
 
 }

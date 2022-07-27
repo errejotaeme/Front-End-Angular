@@ -1,23 +1,15 @@
 <div class="container seccion">
   <h2 class="titulo-seccion">CONOCIMIENTOS</h2>
-  <ul>
-    <li *ngFor="let conocimientos of conocimientosLista">
+  <app-boton
+    claseBoton="boton-agregar"
+    (btnClick)="agregarRegistro()"
+    texto=""
+    icono="fas fa-plus"
+  ></app-boton>
 
-      <div class="caja-edicion">
+    <app-conocimiento-item
+      *ngFor="let conocimiento of conocimientosLista"
+      [conocimiento]="conocimiento"
+    ></app-conocimiento-item>
 
-        <app-boton
-          *ngIf="logeado"
-          claseBoton="boton-edicion"
-          (btnClick)="editar()"
-          icono="fas fa-pencil-alt">
-        </app-boton>
-
-        <span class="campo">Nombre:</span>
-        <p class="contenido">{{conocimientos.nombre}}</p>
-        <span class="campo">Porcentaje:</span>
-        <p class="contenido">{{conocimientos.progreso}}</p>
-
-    </div>
-    </li>
-  </ul>
 </div>
