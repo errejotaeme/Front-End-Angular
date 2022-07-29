@@ -12,13 +12,15 @@ export class EducacionItemComponent implements OnInit {
   //debe tomar el valor que me retorne el servicio que controla inicio sesion
   logeado:boolean=true;
 
+  editarItem:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  editar(){
-    console.log("Abro modal de edicion")
+  modalEdicion(){
+    this.editarItem = !this.editarItem;
   }
 
 }

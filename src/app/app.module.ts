@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -17,6 +18,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { BotonComponent } from './components/boton/boton.component';
 import { CompletoComponent } from './components/completo/completo.component';
 import { PortfolioService } from './servicios/portfolio.service';
+import { ModalEdicionComponent } from './components/modal-edicion/modal-edicion.component';
 
 
 
@@ -34,12 +36,14 @@ import { PortfolioService } from './servicios/portfolio.service';
     CompletoComponent,
     EducacionItemComponent,
     ExperienciaItemComponent,
-    ConocimientoItemComponent
+    ConocimientoItemComponent,
+    ModalEdicionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [PortfolioService],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@
   <app-boton
     *ngIf="logeado"
     claseBoton="boton-edicion"
-    (btnClick)="editar()"
+    (btnClick)="modalEdicion()"
     icono="fas fa-pencil-alt">
   </app-boton>
   <span class="campo">Institución:</span><p class="contenido">{{educacion.escuela}}</p>
@@ -10,4 +10,11 @@
   <span class="campo">Descripción:</span><p class="contenido">{{educacion.comentario}}</p>
   <span class="campo">Fecha de inicio:</span><p class="contenido">{{educacion.inicio}}</p>
   <span class="campo">Finalizado:</span><p class="contenido">{{educacion.fin}}</p>
+
+  <div *ngIf ="editarItem == true">
+    <app-modal-edicion
+      (cerrar)="modalEdicion()"
+      [listaEdicion]="educacion"
+    ></app-modal-edicion>
+  </div>
 </div>

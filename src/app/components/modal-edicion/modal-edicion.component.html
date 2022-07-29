@@ -1,0 +1,34 @@
+<div class="fondo-modal">
+  <div class="contenido-modal">
+
+    <h1>EDITAR DATOS</h1>
+
+    <form class="" (ngSubmit)="guardarEdicion()">
+
+
+      <div class="form-control" *ngFor="let item of listaEdicion | keyvalue, let i=index">
+          <label [for]="item.key">{{item.key}}:</label>
+          <input
+            type="text"
+            [name]="item.key"
+            [id]="item.key"
+            [placeholder]="item.value"
+            [(ngModel)]="item.value"
+          />
+      </div>
+
+      <h4>Contenido original:</h4>
+
+      <div *ngFor="let campo of contenido | keyvalue">
+        <p><b>{{campo.key}}:</b>{{campo.value}}</p>
+      </div>
+
+      <input type="submit" value="Confirmar cambios" class="btn btn-block">
+
+    </form>
+
+
+    <app-boton claseBoton="boton-cerrar" (btnClick)="cerrarModal()" icono="fas fa-window-close"></app-boton>
+  </div>
+
+</div>
