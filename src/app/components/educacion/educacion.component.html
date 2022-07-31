@@ -10,6 +10,7 @@
       <app-educacion-item
       *ngFor="let educacion of educacionLista"
       [educacion]="educacion"
+      (actualizarDatos)="actualizar($event)"
       ></app-educacion-item><!-- "educacion me pasa cada objeto del array"-->
 
 </div>

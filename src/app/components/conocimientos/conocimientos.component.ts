@@ -15,8 +15,8 @@ export class ConocimientosComponent implements OnInit {
   constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.conocimientosLista=data.conocimientos;
+    this.datosPortfolio.obtenerDatos('conocimientos').subscribe(data => {
+      this.conocimientosLista=data;
     });
   }
 

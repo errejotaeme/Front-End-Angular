@@ -14,11 +14,17 @@ export class EducacionComponent implements OnInit {
   constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.educacionLista=data.educacion;
+    this.datosPortfolio.obtenerDatos('educacion').subscribe(data => {
+      this.educacionLista=data;
     });
   }
 
   agregarRegistro(){}
+
+  actualizar(cambios:Educacion){
+    this.datosPortfolio.modificarDatos(cambios, "educacion").subscribe(data => {
+      this.educacionLista.push(cambios);
+    });
+  }
 
 }

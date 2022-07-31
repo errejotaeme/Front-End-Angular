@@ -17,8 +17,8 @@ export class AcercaComponent implements OnInit {
   constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.datosPersona=data.persona;
+    this.datosPortfolio.obtenerDatos('persona').subscribe(data => {
+      this.datosPersona=data;
     });
   }
 

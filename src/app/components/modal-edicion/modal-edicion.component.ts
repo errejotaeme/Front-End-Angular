@@ -1,8 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
-import { Educacion } from 'src/app/interfaces/educacion';
-import { Conocimiento } from 'src/app/interfaces/conocimiento';
-import { Experiencia } from 'src/app/interfaces/experiencia';
-import { Persona } from 'src/app/interfaces/persona';
 
 @Component({
   selector: 'app-modal-edicion',
@@ -10,21 +6,22 @@ import { Persona } from 'src/app/interfaces/persona';
   styleUrls: ['./modal-edicion.component.css']
 })
 export class ModalEdicionComponent implements OnInit {
-  @Input() listaEdicion:(Educacion | Conocimiento | Experiencia | Persona)[]= [];
+  @Input() objetoEdicion:{ [key: string]: any[] } = {};
   @Output() cerrar = new EventEmitter();
+  @Output() editarRegistro = new EventEmitter();
 
-  contenido:any;
+  registroEditado:{ [key: string]: any[] } = this.objetoEdicion;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.contenido = this.listaEdicion
   }
 
-
   guardarEdicion(){
+    const cambios = this.registroEditado;
+    this.editarRegistro.emit(cambios);
     this.cerrarModal();
-    console.log(this.listaEdicion)
+    console.log(cambios);
   }
 
   cerrarModal(){

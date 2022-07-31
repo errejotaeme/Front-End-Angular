@@ -2,24 +2,26 @@
   <div class="contenido-modal">
 
     <h1>EDITAR DATOS</h1>
+    <p><strong>No cambiar ID.</strong></p>
 
     <form class="" (ngSubmit)="guardarEdicion()">
 
 
-      <div class="form-control" *ngFor="let item of listaEdicion | keyvalue, let i=index">
-          <label [for]="item.key">{{item.key}}:</label>
+      <div class="form-control" *ngFor="let campo of objetoEdicion | keyvalue, let i=index">
+          <label [for]="campo.key">{{campo.key}}:</label>
           <input
             type="text"
-            [name]="item.key"
-            [id]="item.key"
-            [placeholder]="item.value"
-            [(ngModel)]="item.value"
+            [name]="campo.key"
+            [id]="campo.key"
+            [placeholder]="campo.value"
+            [(ngModel)]="registroEditado[campo.key]"
+
           />
       </div>
 
       <h4>Contenido original:</h4>
 
-      <div *ngFor="let campo of contenido | keyvalue">
+      <div *ngFor="let campo of objetoEdicion | keyvalue">
         <p><b>{{campo.key}}:</b>{{campo.value}}</p>
       </div>
 
