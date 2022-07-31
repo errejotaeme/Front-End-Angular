@@ -1,8 +1,8 @@
 export interface Educacion {
-  id?: string;
-  escuela?: string;
-  titulo?: string;
   comentario?: string;
-  inicio?: string;
+  escuela?: string;
   fin?: string;
+  id?: string;
+  inicio?: string;
+  titulo?: string;
 }

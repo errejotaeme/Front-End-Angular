@@ -1,13 +1,12 @@
 <div class="fondo-modal">
   <div class="contenido-modal">
 
-    <h1>EDITAR DATOS</h1>
-    <p><strong>No cambiar ID.</strong></p>
+    <h1 class="titulo">EDITAR DATOS</h1>
 
-    <form class="" (ngSubmit)="guardarEdicion()">
+    <form (ngSubmit)="guardarEdicion()" ngNativeValidate>
 
 
-      <div class="form-control" *ngFor="let campo of objetoEdicion | keyvalue, let i=index">
+      <div *ngFor="let campo of objetoEdicion | keyvalue, let i=index">
           <label [for]="campo.key">{{campo.key}}:</label>
           <input
             type="text"
@@ -15,17 +14,18 @@
             [id]="campo.key"
             [placeholder]="campo.value"
             [(ngModel)]="registroEditado[campo.key]"
-
+            class="form-control campo-formulario"
+            required
           />
       </div>
 
-      <h4>Contenido original:</h4>
+      <h2 class="subtitulo" >Contenido original:</h2>
 
       <div *ngFor="let campo of objetoEdicion | keyvalue">
-        <p><b>{{campo.key}}:</b>{{campo.value}}</p>
+        <p><b>{{campo.key}}: </b>{{campo.value}}</p>
       </div>
 
-      <input type="submit" value="Confirmar cambios" class="btn btn-block">
+      <input type="submit" value="Confirmar cambios" class="btn">
 
     </form>
 

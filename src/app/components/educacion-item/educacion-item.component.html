@@ -13,8 +13,8 @@
 
   <div *ngIf ="editarItem == true">
     <app-modal-edicion
-      (cerrar)="modalEdicion()"
       [objetoEdicion]="educacion"
+      (cerrar)="modalEdicion()"
       (editarRegistro)="transmitirEdicion($event)"
     ></app-modal-edicion>
   </div>

@@ -18,12 +18,13 @@
       "fin": "En curso"
     },
     {
-      "id": "2",
-      "escuela": "Coursera",
-      "titulo": "Comportamiento adaptativo",
-      "comentario": "Acceso a la plataforma facilitado por programa del Gobierno de la Ciudad. Registro: https://www.coursera.org/account/accomplishments/verify/NAEJLTLR32MS",
-      "inicio": "26/10/2020",
-      "fin": "9/12/2020"
+      "id":"2",
+      "posicion": "Empleado",
+      "empresa": "Emprendimiento gastronómico en Santiago, Chile.",
+      "tareas": "Producción y comercialización de alimentos vegano/vegetarianos.",
+      "modalidad": "Tiempo completo",
+      "inicio": "Febrero 2016",
+      "fin": "Abril 2017"
     },
     {
       "id": "3",
