@@ -28,10 +28,16 @@ export class PortfolioService {
     //antes: return this.http.get(./assets...json);
   }
 
-  modificarDatos(cambios:(Educacion | Experiencia | Conocimiento), tabla:string): Observable<(Educacion | Experiencia | Conocimiento)>{
+  actualizarDatos(cambios:(Educacion | Experiencia | Conocimiento), tabla:string): Observable<(Educacion | Experiencia | Conocimiento)>{
     const url = `${this.apiUrl}/${tabla}/${cambios.id}`;
     return this.http.put<(Educacion | Experiencia | Conocimiento)>(url, cambios, httpOptions);
   }
+
+  agregarRegistro(registro:(Educacion | Experiencia | Conocimiento), tabla:string): Observable<(Educacion | Experiencia | Conocimiento)>{
+    const url = `${this.apiUrl}/${tabla}`;
+    return this.http.post<(Educacion | Experiencia | Conocimiento)>(url, registro, httpOptions);
+  }
+
 }
 
 //Modificar datos de persona hacerlo aparte

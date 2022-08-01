@@ -1,16 +1,27 @@
 <div class="container seccion">
+
       <h2 class="titulo-seccion">EDUCACION</h2>
+
       <app-boton
-      claseBoton="boton-agregar"
-      (btnClick)="agregarRegistro()"
-      texto=""
-      icono="fas fa-plus"
+        *ngIf="logeado"
+        claseBoton="boton-agregar"
+        (btnClick)="modalAgregar()"
+        texto=""
+        icono="fas fa-plus"
       ></app-boton>
 
+      <div *ngIf ="agregarItem == true">
+        <app-modal-agregar
+          [coleccionObjetos]="educacionLista"
+          (cerrar)="modalAgregar()"
+          (altaRegistro)="alta($event)"
+        ></app-modal-agregar>
+      </div>
+
       <app-educacion-item
-      *ngFor="let educacion of educacionLista"
-      [educacion]="educacion"
-      (actualizarDatos)="actualizar($event)"
+        *ngFor="let educacion of educacionLista"
+        [educacion]="educacion"
+        (actualizarDatos)="actualizar($event)"
       ></app-educacion-item><!-- "educacion me pasa cada objeto del array"-->
 
 </div>

@@ -19,8 +19,7 @@ import { BotonComponent } from './components/boton/boton.component';
 import { CompletoComponent } from './components/completo/completo.component';
 import { PortfolioService } from './servicios/portfolio.service';
 import { ModalEdicionComponent } from './components/modal-edicion/modal-edicion.component';
-
-
+import { ModalAgregarComponent } from './components/modal-agregar/modal-agregar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,8 @@ import { ModalEdicionComponent } from './components/modal-edicion/modal-edicion.
     EducacionItemComponent,
     ExperienciaItemComponent,
     ConocimientoItemComponent,
-    ModalEdicionComponent
+    ModalEdicionComponent,
+    ModalAgregarComponent,
   ],
   imports: [
     BrowserModule,

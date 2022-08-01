@@ -11,6 +11,9 @@ export class EducacionComponent implements OnInit {
 
   educacionLista:Educacion[] = [];
 
+  logeado:boolean=true; //traigo desde otro servicio
+  agregarItem:boolean = false; //switch modal
+
   constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
@@ -19,11 +22,19 @@ export class EducacionComponent implements OnInit {
     });
   }
 
-  agregarRegistro(){}
+  modalAgregar(){
+    this.agregarItem = !this.agregarItem;
+  }
 
   actualizar(cambios:Educacion){
-    this.datosPortfolio.modificarDatos(cambios, "educacion").subscribe(data => {
+    this.datosPortfolio.actualizarDatos(cambios, "educacion").subscribe(data => {
       this.educacionLista.push(cambios);
+    });
+  }
+
+  alta(registro:Educacion){
+    this.datosPortfolio.agregarRegistro(registro, "educacion").subscribe(data => {
+      this.educacionLista.push(registro);
     });
   }
 

@@ -1,28 +1,22 @@
 <div class="fondo-modal">
   <div class="contenido-modal">
 
-    <h1 class="titulo">EDITAR DATOS</h1>
+    <h1 class="titulo">AGREGAR REGISTRO</h1>
+    <p class="aclaracion">A éste nuevo registro le corresponde el número de ID:<strong> {{numeroId}}</strong>.</p>
 
-    <form (ngSubmit)="guardarEdicion()" ngNativeValidate>
+    <form (ngSubmit)="guardarObjeto()" ngNativeValidate>
 
-
-      <div *ngFor="let campo of objetoEdicion | keyvalue, let i=index">
+      <div *ngFor="let campo of objeto | keyvalue">
           <label [for]="campo.key">{{campo.key}}:</label>
           <input
             type="text"
             [name]="campo.key"
             [id]="campo.key"
-            [placeholder]="campo.value"
-            [(ngModel)]="registroEditado[campo.key]"
+            [placeholder]="'Ej: ' + campo.value"
+            [(ngModel)]="nuevoRegistro[campo.key]"
             class="form-control campo-formulario"
             required
           />
-      </div>
-
-      <h2 class="subtitulo" >Contenido original:</h2>
-
-      <div *ngFor="let campo of objetoEdicion | keyvalue">
-        <p><b>{{campo.key}}: </b>{{campo.value}}</p>
       </div>
 
       <input type="submit" value="Confirmar cambios" class="enviar-formulario">

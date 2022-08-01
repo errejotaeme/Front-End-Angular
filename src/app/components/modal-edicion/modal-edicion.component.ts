@@ -5,6 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './modal-edicion.component.html',
   styleUrls: ['./modal-edicion.component.css']
 })
+
 export class ModalEdicionComponent implements OnInit {
   @Input() objetoEdicion: { [key: string]: string} = {};
 
@@ -19,20 +20,19 @@ export class ModalEdicionComponent implements OnInit {
   }
 
 
+  cerrarModal() {
+    this.cerrar.emit();
+  }
+
   guardarEdicion() {
     if (this.registroEditado['id'] !== this.objetoEdicion['id']) {
       alert("No modificar el número de ID. Se debe reingresar el valor existente.");
       return
     }
-
     const cambios = this.registroEditado;
     this.editarRegistro.emit(cambios);
-    alert("Se ha editado los datos. Actualice el navegador para ver los cambios.")
+    alert("Se han editado los datos. Actualice el navegador para ver los cambios.")
     this.cerrarModal();
-  }
-
-  cerrarModal() {
-    this.cerrar.emit();
   }
 
 }
