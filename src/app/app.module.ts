@@ -20,6 +20,7 @@ import { CompletoComponent } from './components/completo/completo.component';
 import { PortfolioService } from './servicios/portfolio.service';
 import { ModalEdicionComponent } from './components/modal-edicion/modal-edicion.component';
 import { ModalAgregarComponent } from './components/modal-agregar/modal-agregar.component';
+import { ModalEliminarComponent } from './components/modal-eliminar/modal-eliminar.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ModalAgregarComponent } from './components/modal-agregar/modal-agregar.
     ConocimientoItemComponent,
     ModalEdicionComponent,
     ModalAgregarComponent,
+    ModalEliminarComponent,
   ],
   imports: [
     BrowserModule,

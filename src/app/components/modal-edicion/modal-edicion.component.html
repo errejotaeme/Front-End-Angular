@@ -3,6 +3,11 @@
 
     <h1 class="titulo">EDITAR DATOS</h1>
 
+    <p class="aclaracion">
+      Para realizar con éxito la edición del registro,
+      se debe ingresar el número de ID original
+      (visible en el marcador de posición).</p>
+
     <form (ngSubmit)="guardarEdicion()" ngNativeValidate>
 
 
@@ -19,7 +24,7 @@
           />
       </div>
 
-      <h2 class="subtitulo" >Contenido original:</h2>
+      <h2 class="titulo-seccion" >CONTENIDO ORIGINAL</h2>
 
       <div *ngFor="let campo of objetoEdicion | keyvalue">
         <p><b>{{campo.key}}: </b>{{campo.value}}</p>
@@ -34,7 +39,7 @@
       claseBoton="boton-cerrar"
       (btnClick)="cerrarModal()"
       icono="fas fa-window-close"
-      texto="CANCELAR Y CERRAR "
+      texto="CANCELAR "
     ></app-boton>
   </div>
 

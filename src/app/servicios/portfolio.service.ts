@@ -38,6 +38,11 @@ export class PortfolioService {
     return this.http.post<(Educacion | Experiencia | Conocimiento)>(url, registro, httpOptions);
   }
 
+  borrarDatos(borrar:(Educacion | Experiencia | Conocimiento), tabla:string): Observable<(Educacion | Experiencia | Conocimiento)>{
+    const url = `${this.apiUrl}/${tabla}/${borrar.id}`;
+    return this.http.delete<(Educacion | Experiencia | Conocimiento)>(url);
+  }
+
 }
 
 //Modificar datos de persona hacerlo aparte

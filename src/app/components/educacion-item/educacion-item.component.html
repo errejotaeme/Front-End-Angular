@@ -1,21 +1,40 @@
 <div class="caja-edicion">
-  <app-boton
-    *ngIf="logeado"
-    claseBoton="boton-edicion"
-    (btnClick)="modalEdicion()"
-    icono="fas fa-pencil-alt">
-  </app-boton>
-  <span class="campo">Institución:</span><p class="contenido">{{educacion.escuela}}</p>
-  <span class="campo">Título/Curso:</span><p class="contenido">{{educacion.titulo}}</p>
-  <span class="campo">Descripción:</span><p class="contenido">{{educacion.comentario}}</p>
-  <span class="campo">Fecha de inicio:</span><p class="contenido">{{educacion.inicio}}</p>
-  <span class="campo">Finalizado:</span><p class="contenido">{{educacion.fin}}</p>
 
-  <div *ngIf ="editarItem == true">
-    <app-modal-edicion
-      [objetoEdicion]="educacion"
-      (cerrar)="modalEdicion()"
-      (editarRegistro)="transmitirEdicion($event)"
-    ></app-modal-edicion>
-  </div>
+    <app-boton
+      *ngIf="logeado"
+      claseBoton="boton-edicion"
+      (btnClick)="modalEdicion()"
+      icono="fas fa-pencil-alt">
+    </app-boton>
+
+    <span class="campo">Institución:</span><p class="contenido">{{educacion.escuela}}</p>
+    <span class="campo">Título/Curso:</span><p class="contenido">{{educacion.titulo}}</p>
+    <span class="campo">Descripción:</span><p class="contenido">{{educacion.comentario}}</p>
+    <span class="campo">Fecha de inicio:</span><p class="contenido">{{educacion.inicio}}</p>
+    <span class="campo">Finalizado:</span><p class="contenido">{{educacion.fin}}</p>
+
+    <app-boton
+      *ngIf="logeado"
+      claseBoton="boton-edicion"
+      (btnClick)="modalEliminar()"
+      icono="fa-solid fa-delete-left">
+    </app-boton>
+
+    <div *ngIf ="editarItem == true">
+      <app-modal-edicion
+        [objetoEdicion]="educacion"
+        (cerrar)="modalEdicion()"
+        (editarRegistro)="transmitirEdicion($event)"
+      ></app-modal-edicion>
+    </div>
+
+
+    <div *ngIf ="eliminarItem == true">
+      <app-modal-eliminar
+        [objetoAEliminar]="educacion"
+        (cerrar)="modalEliminar()"
+        (eliminarRegistro)="transmitirObjeto($event)"
+      ></app-modal-eliminar>
+    </div>
+
 </div>

@@ -19,7 +19,6 @@ export class ModalEdicionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   cerrarModal() {
     this.cerrar.emit();
   }

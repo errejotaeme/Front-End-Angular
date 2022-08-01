@@ -38,4 +38,10 @@ export class EducacionComponent implements OnInit {
     });
   }
 
+  eliminar(borrar:Educacion){
+    this.datosPortfolio.borrarDatos(borrar, "educacion").subscribe(data => {
+      this.educacionLista.push(borrar);
+    });
+  }
+
 }

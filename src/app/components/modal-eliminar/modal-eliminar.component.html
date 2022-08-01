@@ -1,0 +1,31 @@
+
+<div class="fondo-modal">
+  <div class="contenido-modal">
+
+    <h1 class="titulo">ELIMINAR DATOS</h1>
+
+    <p class="aclaracion">IMPORTANTE: esta acción no se puede deshacer.</p>
+
+    <h2 class="subtitulo" >Contenido original:</h2>
+
+    <div *ngFor="let campo of objetoAEliminar | keyvalue">
+      <p><b>{{campo.key}}: </b>{{campo.value}}</p>
+    </div>
+
+      <app-boton
+        claseBoton="boton-eliminar"
+        (btnClick)="eliminarObjeto()"
+        icono="fa-solid fa-check"
+        texto="ELIMINAR "
+      ></app-boton>
+
+    <app-boton
+      claseBoton="boton-cerrar"
+      (btnClick)="cerrarModal()"
+      icono="fas fa-window-close"
+      texto="CANCELAR "
+    ></app-boton>
+
+  </div>
+
+</div>
