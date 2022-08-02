@@ -14,7 +14,9 @@ export class EducacionComponent implements OnInit {
   logeado:boolean=true; //traigo desde otro servicio
   agregarItem:boolean = false; //switch modal
 
-  constructor(private datosPortfolio: PortfolioService) { }
+  constructor(
+    private datosPortfolio: PortfolioService,
+    ) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos('educacion').subscribe(data => {

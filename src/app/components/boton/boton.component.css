@@ -1,15 +1,15 @@
 .boton-header{
-  font-size: 0.6em !important;
-  letter-spacing: 0.1em !important;
+  color:inherit !important;
+  font-size: 16px !important;
+  letter-spacing: 1px !important;
   font-weight: bolder !important;
   white-space: nowrap !important;
-  color:rgb(255, 172, 18) !important;
-  border: 1px solid rgb(255, 172, 18) !important;
+  border: none !important;
 }
 
 .boton-header:hover{
-  color:rgb(202, 137, 17) !important;
-  border: 1px solid rgb(202, 137, 17) !important;
+  color:rgb(128, 128, 128) !important;
+  border: none !important;
 }
 
 .boton-edicion {

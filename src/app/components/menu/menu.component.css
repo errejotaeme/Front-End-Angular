@@ -6,11 +6,12 @@
 }
 
 .enlace-menu {
-  background-color: rgb(42, 207, 92, 0.5);
+  background-color: rgba(75, 204, 255, 0.582);
   width:fit-content;
   padding:0.2vw 2vw;
   margin-bottom: 1vw;
   border-bottom-left-radius: 1vw;
+  border-top-left-radius: 1vw;
 }
 
 .texto-menu {
@@ -24,5 +25,5 @@
 }
 
 .texto-menu:hover {
-  color:rgb(19, 94, 41) ;
+  color:rgb(75, 204, 255) ;
 }

@@ -14,7 +14,7 @@ body.tema-oscuro {
 /*Secciones*/
 
 .seccion{
-  min-height: 50vh;
+  padding-bottom: 5vh;
 }
 
 .nombre {
@@ -40,6 +40,7 @@ body.tema-oscuro {
   letter-spacing: 0.1vw;
   font-weight: bold;
   font-size: 3vw;
+  user-select: none;
 }
 
 .campo{
@@ -57,7 +58,8 @@ body.tema-oscuro {
   height: fit-content;
   padding: 1vw 1vw;
   margin-top:1em;
-  background-color: rgba(179, 169, 169, 0.26);
+  background-color: rgba(145, 145, 145, 0.26);
+  border-radius: 1em;
 }
 
 
@@ -80,6 +82,7 @@ body.tema-oscuro {
   padding:3vw 3vw;
   width:80vw;
   min-height: 50vh;
+  max-height: 90vh;
   background-color: antiquewhite;
   margin:auto;
   overflow:scroll;

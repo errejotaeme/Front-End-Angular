@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
 
   tema: boolean = false;
   clase: string = "";
+  cambiar:string = "fas fa-moon"
 
   constructor(private renderer: Renderer2) { }
 
@@ -22,9 +23,11 @@ export class HeaderComponent implements OnInit {
      if(this.tema == false){
     this.renderer.addClass(document.body, 'tema-oscuro');
     this.clase = "img-invertida";
+    this.cambiar="fas fa-sun";
      }else{
       this.renderer.removeClass(document.body, 'tema-oscuro');
       this.clase = "";
+      this.cambiar= "fas fa-moon"
      }
     this.tema = !this.tema;
     }
