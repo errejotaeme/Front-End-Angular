@@ -30,7 +30,7 @@ export class ModalEdicionComponent implements OnInit {
     }
     const cambios = this.registroEditado;
     this.editarRegistro.emit(cambios);
-    alert("Se han editado los datos. Actualice el navegador para ver los cambios.")
+    alert("Se han editado los datos. Actualice el navegador para ver correctamente los cambios.")
     this.cerrarModal();
   }
 

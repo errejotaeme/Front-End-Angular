@@ -10,6 +10,7 @@ export class BotonComponent implements OnInit {
   @Input() texto: string = "";
   @Output() btnClick = new EventEmitter();
   @Input() icono: string = "";
+  @Input() titulo: string = "";
 
 
   constructor() { }

@@ -1,7 +1,9 @@
 <button
   class="btn"
   [ngClass]=[claseBoton]
-  (click)= "onClick()">
+  (click)= "onClick()"
+  [title]=[titulo]
+  >
   <span>{{texto}}</span>
   <i [ngClass]=[icono]></i>
 </button>

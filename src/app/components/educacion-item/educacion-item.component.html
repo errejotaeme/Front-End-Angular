@@ -4,8 +4,9 @@
       *ngIf="logeado"
       claseBoton="boton-edicion"
       (btnClick)="modalEdicion()"
-      icono="fas fa-pencil-alt">
-    </app-boton>
+      icono="fas fa-pencil-alt"
+      titulo="Editar"
+    ></app-boton>
 
     <span class="campo">Institución:</span><p class="contenido">{{educacion.escuela}}</p>
     <span class="campo">Título/Curso:</span><p class="contenido">{{educacion.titulo}}</p>
@@ -17,8 +18,9 @@
       *ngIf="logeado"
       claseBoton="boton-edicion"
       (btnClick)="modalEliminar()"
-      icono="fa-solid fa-delete-left">
-    </app-boton>
+      icono="fa-solid fa-delete-left"
+      titulo="Eliminar"
+    ></app-boton>
 
     <div *ngIf ="editarItem == true">
       <app-modal-edicion

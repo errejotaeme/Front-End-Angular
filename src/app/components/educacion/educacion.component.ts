@@ -27,21 +27,17 @@ export class EducacionComponent implements OnInit {
   }
 
   actualizar(cambios:Educacion){
-    this.datosPortfolio.actualizarDatos(cambios, "educacion").subscribe(data => {
-      this.educacionLista.push(cambios);
-    });
+    this.datosPortfolio.actualizarDatos(cambios, "educacion").subscribe()
   }
 
   alta(registro:Educacion){
-    this.datosPortfolio.agregarRegistro(registro, "educacion").subscribe(data => {
+    this.datosPortfolio.agregarRegistro(registro, "educacion").subscribe(registro => {
       this.educacionLista.push(registro);
     });
   }
 
   eliminar(borrar:Educacion){
-    this.datosPortfolio.borrarDatos(borrar, "educacion").subscribe(data => {
-      this.educacionLista.push(borrar);
-    });
+    this.datosPortfolio.borrarDatos(borrar, "educacion").subscribe()
   }
 
 }
