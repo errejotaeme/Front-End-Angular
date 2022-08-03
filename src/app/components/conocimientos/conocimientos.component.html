@@ -1,15 +1,29 @@
 <div class="container seccion">
+
   <h2 class="titulo-seccion" id="seccion-conocimientos">CONOCIMIENTOS</h2>
+
   <app-boton
+    *ngIf="logeado"
     claseBoton="boton-agregar"
-    (btnClick)="agregarRegistro()"
+    (btnClick)="modalAgregar()"
     texto=""
+    titulo="Agregar registro"
     icono="fas fa-plus"
   ></app-boton>
+
+  <div *ngIf ="agregarItem == true">
+    <app-modal-agregar
+      [coleccionObjetos]="conocimientosLista"
+      (cerrar)="modalAgregar()"
+      (altaRegistro)="alta($event)"
+    ></app-modal-agregar>
+  </div>
 
     <app-conocimiento-item
       *ngFor="let conocimiento of conocimientosLista"
       [conocimiento]="conocimiento"
+      (actualizarDatos)="actualizar($event)"
+      (borrarDatos)="eliminar($event)"
     ></app-conocimiento-item>
 
 </div>

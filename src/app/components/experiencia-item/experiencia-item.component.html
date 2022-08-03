@@ -1,11 +1,13 @@
 <div class="caja-edicion">
+  <span class="indice-item">{{experiencia.id}}</span>
 
   <app-boton
     *ngIf="logeado"
     claseBoton="boton-edicion"
-    (btnClick)="editar()"
-    icono="fas fa-pencil-alt">
-  </app-boton>
+    (btnClick)="modalEdicion()"
+    icono="fas fa-pencil-alt"
+    titulo="Editar"
+  ></app-boton>
 
   <span class="campo">Puesto:</span><p class="contenido">{{experiencia.posicion}}</p>
   <span class="campo">Empresa:</span><p class="contenido">{{experiencia.empresa}}</p>
@@ -13,4 +15,29 @@
   <span class="campo">Modalidad:</span><p class="contenido">{{experiencia.modalidad}}</p>
   <span class="campo">Desde:</span><p class="contenido">{{experiencia.inicio}}</p>
   <span class="campo">Hasta:</span><p class="contenido">{{experiencia.fin}}</p>
+
+  <app-boton
+    *ngIf="logeado"
+    claseBoton="boton-edicion"
+    (btnClick)="modalEliminar()"
+    icono="fa-solid fa-delete-left"
+    titulo="Eliminar"
+  ></app-boton>
+
+  <div *ngIf ="editarItem == true">
+    <app-modal-edicion
+      [objetoEdicion]="experiencia"
+      (cerrar)="modalEdicion()"
+      (editarRegistro)="transmitirEdicion($event)"
+    ></app-modal-edicion>
+  </div>
+
+  <div *ngIf ="eliminarItem == true">
+    <app-modal-eliminar
+      [objetoAEliminar]="experiencia"
+      (cerrar)="modalEliminar()"
+      (eliminarRegistro)="transmitirObjeto($event)"
+    ></app-modal-eliminar>
+  </div>
+
 </div>

@@ -12,6 +12,9 @@ export class ConocimientosComponent implements OnInit {
 
   conocimientosLista:Conocimiento[] = [];
 
+  logeado:boolean=true; //traigo desde otro servicio
+  agregarItem:boolean = false;
+
   constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
@@ -20,6 +23,22 @@ export class ConocimientosComponent implements OnInit {
     });
   }
 
-  agregarRegistro(){}
+  modalAgregar(){
+    this.agregarItem = !this.agregarItem;
+  }
+
+  actualizar(cambios:Conocimiento){
+    this.datosPortfolio.actualizarDatos(cambios, "conocimientos").subscribe()
+  }
+
+  alta(registro:Conocimiento){
+    this.datosPortfolio.agregarRegistro(registro, "conocimientos").subscribe(registro => {
+      this.conocimientosLista.push(registro);
+    });
+  }
+
+  eliminar(borrar:Conocimiento){
+    this.datosPortfolio.borrarDatos(borrar, "conocimientos").subscribe()
+  }
 
 }

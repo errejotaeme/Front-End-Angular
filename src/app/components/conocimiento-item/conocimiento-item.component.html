@@ -1,15 +1,39 @@
 <div class="caja-edicion">
 
+    <app-boton
+      *ngIf="logeado"
+      claseBoton="boton-edicion"
+      (btnClick)="modalEdicion()"
+      icono="fas fa-pencil-alt"
+      titulo="Editar"
+    ></app-boton>
+
+  <span class="campo">Nombre:</span><p class="contenido">{{conocimiento.nombre}}</p>
+  <span class="campo">Porcentaje:</span><p class="contenido">{{conocimiento.progreso}}</p>
+
   <app-boton
     *ngIf="logeado"
     claseBoton="boton-edicion"
-    (btnClick)="editar()"
-    icono="fas fa-pencil-alt">
-  </app-boton>
+    (btnClick)="modalEliminar()"
+    icono="fa-solid fa-delete-left"
+    titulo="Eliminar"
+  ></app-boton>
 
-  <span class="campo">Nombre:</span>
-  <p class="contenido">{{conocimiento.nombre}}</p>
-  <span class="campo">Porcentaje:</span>
-  <p class="contenido">{{conocimiento.progreso}}</p>
+  <div *ngIf ="editarItem == true">
+    <app-modal-edicion
+      [objetoEdicion]="conocimiento"
+      (cerrar)="modalEdicion()"
+      (editarRegistro)="transmitirEdicion($event)"
+    ></app-modal-edicion>
+  </div>
+
+
+  <div *ngIf ="eliminarItem == true">
+    <app-modal-eliminar
+      [objetoAEliminar]="conocimiento"
+      (cerrar)="modalEliminar()"
+      (eliminarRegistro)="transmitirObjeto($event)"
+    ></app-modal-eliminar>
+  </div>
 
 </div>

@@ -1,16 +1,30 @@
 <div class="container seccion">
+
   <h2 class="titulo-seccion" id="seccion-experiencia">EXPERIENCIA LABORAL</h2>
-  <app-boton
-    claseBoton="boton-agregar"
-    (btnClick)="agregarRegistro()"
-    texto=""
-    icono="fas fa-plus"
-  ></app-boton>
+
+      <app-boton
+        *ngIf="logeado"
+        claseBoton="boton-agregar"
+        (btnClick)="modalAgregar()"
+        texto=""
+        titulo="Agregar registro"
+        icono="fas fa-plus"
+      ></app-boton>
+
+      <div *ngIf ="agregarItem == true">
+        <app-modal-agregar
+          [coleccionObjetos]="experienciaLista"
+          (cerrar)="modalAgregar()"
+          (altaRegistro)="alta($event)"
+        ></app-modal-agregar>
+      </div>
 
 
     <app-experiencia-item
-      *ngFor="let experiencia of experienciaLista, let i = index"
+      *ngFor="let experiencia of experienciaLista"
       [experiencia]="experiencia"
+      (actualizarDatos)="actualizar($event)"
+      (borrarDatos)="eliminar($event)"
     ></app-experiencia-item>
 
 </div>

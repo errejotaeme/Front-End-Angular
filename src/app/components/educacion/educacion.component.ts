@@ -12,7 +12,7 @@ export class EducacionComponent implements OnInit {
   educacionLista:Educacion[] = [];
 
   logeado:boolean=true; //traigo desde otro servicio
-  agregarItem:boolean = false; //switch modal
+  agregarItem:boolean = false;
 
   constructor(
     private datosPortfolio: PortfolioService,

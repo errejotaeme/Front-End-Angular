@@ -14,7 +14,6 @@ export class EducacionItemComponent implements OnInit {
 
   //debe tomar el valor que me retorne el servicio que controla inicio sesion
   logeado:boolean=true;
-
   editarItem:boolean = false;
   eliminarItem:boolean = false;
 
