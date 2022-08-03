@@ -21,6 +21,7 @@ import { PortfolioService } from './servicios/portfolio.service';
 import { ModalEdicionComponent } from './components/modal-edicion/modal-edicion.component';
 import { ModalAgregarComponent } from './components/modal-agregar/modal-agregar.component';
 import { ModalEliminarComponent } from './components/modal-eliminar/modal-eliminar.component';
+import { ProgresoCircularComponent } from './components/progreso-circular/progreso-circular.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ModalEliminarComponent } from './components/modal-eliminar/modal-elimin
     ModalEdicionComponent,
     ModalAgregarComponent,
     ModalEliminarComponent,
+    ProgresoCircularComponent
   ],
   imports: [
     BrowserModule,

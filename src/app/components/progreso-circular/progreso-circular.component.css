@@ -1,0 +1,71 @@
+.marco{
+  background-color: rgba(255, 255, 255, 0);
+  width:fit-content;
+  height: fit-content;
+  padding: 1vw;
+  z-index: 10;
+}
+
+.borde{
+  background-color: white;
+  color:black;
+  width:9vw;
+  height:9vw;
+  display:grid;
+  align-items: center;
+  justify-items: center;
+  margin:auto auto;
+  border-radius: 50%;
+  position:relative;
+  z-index: 11;
+}
+
+.frente-texto{
+  background-color: white;
+  width:6.5vw;
+  height:6.5vw;
+  margin:auto auto;
+  border-radius: 50%;
+  grid-area: 1/1/2/2;
+  position:relative;
+  z-index: 15;
+}
+
+.frente-texto p{
+  font-size:2vw;
+  text-align: center;
+  font-weight: bolder;
+  color:black;
+  margin-top: 1.5vw;
+}
+.rotar-negro{
+  background: linear-gradient(270deg, rgb(53, 205, 58) 50%, rgba(0, 0, 0, 0) 0%);
+  width:8vw;
+  height:8vw;
+  margin:auto auto;
+  border-radius: 50%;
+  grid-area: 1/1/2/2;
+  visibility:"";
+  transform: rotate(0deg);
+  position:relative;
+  z-index: 14;
+}
+.rotar-blanco{
+  background: linear-gradient(270deg, white 50%, rgba(0, 0, 0, 0) 0%);
+  width:8.1vw;
+  height:8.1vw;
+  margin:auto auto;
+  border-radius: 50%;
+  grid-area: 1/1/2/2;
+  transform: rotate(0deg);
+  z-index: 13;
+}
+.fijo{
+  background: linear-gradient(270deg, rgb(53, 205, 58)  50%, rgba(0, 0, 0, 0) 0%);
+  width:8vw;
+  height:8vw;
+  margin:auto auto;
+  border-radius: 50%;
+  grid-area: 1/1/2/2;
+  z-index: 12;
+}

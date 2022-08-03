@@ -125,12 +125,12 @@
 	"conocimientos": [{
 			"id": "1",
 			"nombre": "Herramientas digitales de diseño",
-			"progreso": 80
+			"progreso": "80"
 		},
 		{
 			"id": "2",
 			"nombre": "Inglés",
-			"progreso": 70
+			"progreso": "70"
 		}
 	]
 }

@@ -14,12 +14,15 @@ export class ConocimientoItemComponent implements OnInit {
 
   //debe tomar el valor que me retorne el servicio que controla inicio sesion
   logeado:boolean=true;
+
   editarItem:boolean = false;
   eliminarItem:boolean = false;
+  progreso: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.progreso = Number(this.conocimiento.progreso);
   }
 
   modalEdicion(){

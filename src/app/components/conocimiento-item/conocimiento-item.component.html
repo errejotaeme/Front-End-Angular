@@ -8,8 +8,11 @@
       titulo="Editar"
     ></app-boton>
 
-  <span class="campo">Nombre:</span><p class="contenido">{{conocimiento.nombre}}</p>
-  <span class="campo">Porcentaje:</span><p class="contenido">{{conocimiento.progreso}}</p>
+  <p class="contenido">{{conocimiento.nombre}}</p>
+
+  <app-progreso-circular
+    porcentaje="{{progreso}}"
+  ></app-progreso-circular>
 
   <app-boton
     *ngIf="logeado"
