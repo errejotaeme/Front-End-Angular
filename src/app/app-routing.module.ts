@@ -6,21 +6,23 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { ConocimientosComponent } from './components/conocimientos/conocimientos.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
-
-
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 
 const rutas:Routes = [
-  {path: 'educacion', component: EducacionComponent},
-  {path:'experiencia', component: ExperienciaComponent},
-  {path:'conocimientos', component: ConocimientosComponent},
-  {path:'proyectos', component: ProyectosComponent},
-  {path:'completo', component: CompletoComponent}
+  {path:'', redirectTo:'iniciar-sesion', pathMatch:'full'},
+  {path: 'iniciar-sesion', component: IniciarSesionComponent},
+  {path:'portfolio', component:PortfolioComponent, children: [
+    {path: 'educacion', component: EducacionComponent},
+    {path:'experiencia', component: ExperienciaComponent},
+    {path:'conocimientos', component: ConocimientosComponent},
+    {path:'proyectos', component: ProyectosComponent},
+    {path:'completo', component: CompletoComponent}
+    ]
+  }
 ]
 
-
-
 @NgModule({
-
   imports: [RouterModule.forRoot(rutas, {
     onSameUrlNavigation: 'reload',
     anchorScrolling: 'enabled'})],

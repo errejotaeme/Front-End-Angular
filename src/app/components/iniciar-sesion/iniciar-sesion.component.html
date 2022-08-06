@@ -1,0 +1,14 @@
+
+<div class="container inicio">
+<form ngSubmit="" [formGroup]="formulario">
+  <div class="form-group input-inicio">
+    <label for="user">Usuario:</label>
+    <input type="text" class="form-control campo-formulario" id="user" formControlName="user" placeholder="Ingresar nombre de usuario">
+  </div>
+  <div class="form-group input-inicio">
+    <label for="pass">Contraseña:</label>
+    <input type="password" class="form-control campo-formulario" id="pass" formControlName="pass" placeholder="Ingresar contraseña">
+  </div>
+  <button type="submit" class="btn btn-dark btn-enviar">Enviar</button>
+</form>
+</div>
