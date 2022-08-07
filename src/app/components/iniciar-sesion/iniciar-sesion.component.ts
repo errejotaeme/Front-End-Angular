@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-iniciar-sesion',
@@ -10,13 +12,21 @@ export class IniciarSesionComponent implements OnInit {
 
   formulario:FormGroup;
 
-  constructor(private fb:FormBuilder) {
-    this.formulario = this.fb.group(
-      {
-        usuario : ['', [Validators.required]],
-        password: ['', [Validators.required, Validators.minLength(8)]]
-      }
-    );
+  constructor(
+    private formBuilder:FormBuilder,
+    private autenticacionService:AutenticacionService,
+    private ruta:Router) {
+      this.formulario = this.formBuilder.group(
+        {
+          usuario : ['', [Validators.required]],
+          password: ['', [Validators.required, Validators.minLength(8)]],
+          deviceInfo:this.formBuilder.group({
+            deviceId: ["123456"],
+            deviceType: ["ANDROID"],
+            notificationToken:["987dddd789"]
+          })
+        }
+      );
   }
 
   ngOnInit(): void {
@@ -28,6 +38,14 @@ export class IniciarSesionComponent implements OnInit {
 
   get Password(){
     return this.formulario.get('password');
+  }
+
+  enviar(event:Event){
+    event.preventDefault;
+    this.autenticacionService.iniciarSesion(this.formulario.value).subscribe(data=>{
+      console.log("DATA: " + JSON.stringify(data));
+      this.ruta.navigate(['/portfolio']);
+    })
   }
 
 
