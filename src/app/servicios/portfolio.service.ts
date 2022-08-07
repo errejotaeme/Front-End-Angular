@@ -19,7 +19,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiUrl = 'http://localhost:3000/login';
+  private apiUrl = 'http://localhost:3000';
 
   constructor(private http:HttpClient) { }
 

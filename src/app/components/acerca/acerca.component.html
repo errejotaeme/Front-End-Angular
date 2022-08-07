@@ -1,7 +1,8 @@
 <div *ngFor="let persona of datosPersona" class="container seccion">
 
 
-  <div class="caja-edicion">
+  <div class="caja-edicion acerca">
+
     <app-boton
       *ngIf="logeado"
       claseBoton="boton-edicion"
@@ -14,9 +15,26 @@
       alt="Banner"
       class="banner img-fluid"
     >
+
   </div>
 
-  <div class="caja-edicion">
+  <div class="caja-edicion perfil">
+    <app-boton
+      *ngIf="logeado"
+      claseBoton="boton-edicion"
+      (btnClick)="editar()"
+      icono="fas fa-pencil-alt">
+    </app-boton>
+
+    <img
+      [src]="persona.foto"
+      alt="foto"
+      class="foto-perfil img-fluid"
+    >
+  </div>
+
+
+  <div class="caja-edicion acerca">
     <app-boton
       *ngIf="logeado"
       claseBoton="boton-edicion"
@@ -26,7 +44,7 @@
     <h3 class="nombre">{{persona.nombre}}</h3>
   </div>
 
-  <div class="caja-edicion">
+  <div class="caja-edicion acerca">
     <app-boton
       *ngIf="logeado"
       claseBoton="boton-edicion"
@@ -37,7 +55,8 @@
   </div>
 
   <span class="campo">SOBRE MI:</span>
-  <div class="caja-edicion">
+
+  <div class="caja-edicion acerca">
     <app-boton
       *ngIf="logeado"
       claseBoton="boton-edicion"

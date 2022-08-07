@@ -6,6 +6,7 @@
   white-space: nowrap !important;
   border: none !important;
   float:right;
+  text-shadow: 1px 2px 3px rgba(60, 60, 60, 0.57);
 }
 
 .boton-header:hover{
@@ -16,28 +17,31 @@
 .boton-edicion {
   display:block;
   font-size: 1em;
-  color:red;
+  color:rgb(83, 23, 224);
   border:none;
+  text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
 }
 
 .boton-agregar {
   display:block;
   font-size: 2em;
-  color:red;
+  color:rgb(83, 23, 224);
   border:none;
+  text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
 }
 
 .boton-cerrar {
   display:block;
   font-size: 2em;
-  color:rgb(255, 0, 0);
+  color:rgb(83, 23, 224);
   border:none;
   float:right;
+  text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
 }
 
 .boton-eliminar{
   display:block;
   font-size: 1em;
-  color:rgb(3, 0, 209);
+  color:rgb(255, 37, 99);
   border:none;
 }

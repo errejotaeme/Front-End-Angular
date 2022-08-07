@@ -134,8 +134,18 @@
     },
     {
       "id": "3",
-      "nombre": "prueba",
-      "progreso": "12"
+      "nombre": "prueba con nombre largo",
+      "progreso": "23"
+    },
+    {
+      "id": "4",
+      "nombre": "prueba2",
+      "progreso": "85"
+    },
+    {
+      "id": "5",
+      "nombre": "Prueba corta",
+      "progreso": "63"
     }
   ]
 }

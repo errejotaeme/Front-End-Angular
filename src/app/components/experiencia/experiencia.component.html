@@ -19,12 +19,13 @@
         ></app-modal-agregar>
       </div>
 
-
-    <app-experiencia-item
-      *ngFor="let experiencia of experienciaLista"
-      [experiencia]="experiencia"
-      (actualizarDatos)="actualizar($event)"
-      (borrarDatos)="eliminar($event)"
-    ></app-experiencia-item>
+    <div class="items">
+      <app-experiencia-item
+        *ngFor="let experiencia of experienciaLista"
+        [experiencia]="experiencia"
+        (actualizarDatos)="actualizar($event)"
+        (borrarDatos)="eliminar($event)"
+      ></app-experiencia-item>
+    </div>
 
 </div>

@@ -2,12 +2,12 @@
 
 body {
   color: rgb(22, 22, 22);
-  background-color: rgb(236, 233, 233);
+  background: linear-gradient(280deg, rgb(190, 189, 189) 10%, rgb(255, 255, 255) );
 }
 
 body.tema-oscuro {
   color: #fff;
-  background-color: rgb(22, 22, 22);
+  background: linear-gradient(280deg, rgb(19, 19, 19) 10%, rgb(40, 40, 40) );
 }
 
 
@@ -54,23 +54,31 @@ body.tema-oscuro {
 }
 
 .caja-edicion{
-  width: fit-content;
+  max-width:33vw;
   height: fit-content;
   padding: 1vw 1vw;
   margin-top:1em;
-  background-color: rgba(145, 145, 145, 0.26);
-  border-radius: 1em;
+  margin-right:0.5em ;
+  background: linear-gradient(315deg, rgba(0, 0, 0, 0.267), rgba(255, 255, 255, 0.127) );
+  border-radius: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
+.items{
+  display:flex;
+  flex-wrap:wrap;
+  align-items: flex-end;
+}
+
 
 .indice-item{
   float: right;
   margin-right:0;
-  font-style: oblique;
   font-weight: bolder;
-  font-family: serif;
   font-size: 3vw;
-  color:rgba(145, 145, 145, 0.26);
+  color:rgba(145, 145, 145, 0.497);
 }
+
 
 /*modal*/
 
@@ -93,13 +101,16 @@ body.tema-oscuro {
   width:80vw;
   min-height: 50vh;
   max-height: 90vh;
-  background-color: antiquewhite;
+  background: rgb(226, 226, 226);
   margin:auto;
   overflow:scroll;
+  border-radius: 0.5em;
 }
 
-.contenido-modal h1 {
+.titulo-modal{
   text-align: center;
+  font-weight: bolder;
+  letter-spacing: 0.2vw;
 }
 
 .campo-formulario{
@@ -110,15 +121,18 @@ body.tema-oscuro {
 }
 
 .enviar-formulario{
-  background-color: rgb(71, 207, 155);
+  background-color: rgb(111, 255, 200);
   margin-bottom: 2em;
   margin-top:2em;
   padding:0.5em 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 0.5em;
+  border:none;
 }
 
 .aclaracion{
-  background-color: rgb(255, 123, 0);
-  padding: 1vw 1vw;
+  background-color: rgb(255, 203, 31);
+  padding: 1.5vw 1.5vw;
   width: fit-content;
   margin:1em auto;
 }

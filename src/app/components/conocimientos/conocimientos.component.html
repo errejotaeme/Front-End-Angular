@@ -19,11 +19,15 @@
     ></app-modal-agregar>
   </div>
 
+  <div class="items">
+
     <app-conocimiento-item
       *ngFor="let conocimiento of conocimientosLista"
       [conocimiento]="conocimiento"
       (actualizarDatos)="actualizar($event)"
       (borrarDatos)="eliminar($event)"
     ></app-conocimiento-item>
+
+  </div>
 
 </div>

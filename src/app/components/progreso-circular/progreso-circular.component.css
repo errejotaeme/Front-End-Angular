@@ -39,7 +39,7 @@
   margin-top: 1.5vw;
 }
 .rotar-negro{
-  background: linear-gradient(270deg, rgb(53, 205, 58) 50%, rgba(0, 0, 0, 0) 0%);
+  background: linear-gradient(270deg,  rgb(23, 224, 184) 50%, rgba(0, 0, 0, 0) 0%);
   width:8vw;
   height:8vw;
   margin:auto auto;
@@ -61,7 +61,7 @@
   z-index: 13;
 }
 .fijo{
-  background: linear-gradient(270deg, rgb(53, 205, 58)  50%, rgba(0, 0, 0, 0) 0%);
+  background: linear-gradient(270deg, rgb(23, 224, 184) 50%, rgba(0, 0, 0, 0) 0%);
   width:8vw;
   height:8vw;
   margin:auto auto;
