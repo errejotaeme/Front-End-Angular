@@ -8,7 +8,7 @@
 .enlace-menu {
   background: rgba(0, 255, 183, 0.323);
   width:fit-content;
-  padding:0.2vw 2vw;
+  padding:0.2rem 0.7rem;
   margin-bottom: 1vw;
   border-bottom-left-radius: 0.7vw;
   border-top-left-radius: 0.7vw;
@@ -18,11 +18,23 @@
 .texto-menu {
  color: inherit;
  text-decoration: none;
- font-size: 2.5vw !important;
- font-weight: bold;
- letter-spacing: 0.2vw;
+ font-size: 1rem !important;
+ font-weight: bolder;
+ letter-spacing: 0.1rem;
  vertical-align: middle;
  user-select: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .texto-menu {
+    color: inherit;
+    text-decoration: none;
+    font-size: 2rem !important;
+    font-weight: bolder;
+    letter-spacing: 0.15rem;
+    vertical-align: middle;
+    user-select: none;
+   }
 }
 
 .texto-menu:hover {

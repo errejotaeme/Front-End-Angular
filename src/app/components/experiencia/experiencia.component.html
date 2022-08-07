@@ -1,15 +1,15 @@
 <div class="container seccion">
 
-  <h2 class="titulo-seccion" id="seccion-experiencia">EXPERIENCIA LABORAL</h2>
+  <app-boton
+    *ngIf="logeado"
+    claseBoton="boton-agregar"
+    (btnClick)="modalAgregar()"
+    texto=""
+    titulo="Agregar registro"
+    icono="fas fa-plus"
+  ></app-boton>
 
-      <app-boton
-        *ngIf="logeado"
-        claseBoton="boton-agregar"
-        (btnClick)="modalAgregar()"
-        texto=""
-        titulo="Agregar registro"
-        icono="fas fa-plus"
-      ></app-boton>
+  <h2 class="titulo-seccion" id="seccion-experiencia">EXPERIENCIA LABORAL</h2>
 
       <div *ngIf ="agregarItem == true">
         <app-modal-agregar

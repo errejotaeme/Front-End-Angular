@@ -16,32 +16,38 @@
 
 .boton-edicion {
   display:block;
-  font-size: 1em;
+  font-size: 1rem;
   color:rgb(83, 23, 224);
   border:none;
   text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
+  user-select: none;
 }
 
 .boton-agregar {
   display:block;
-  font-size: 2em;
+  font-size: 1.5rem;
   color:rgb(83, 23, 224);
   border:none;
   text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
+  float:right;
+  position: relative;
+  user-select: none;
 }
 
 .boton-cerrar {
   display:block;
-  font-size: 2em;
+  font-size: 2rem;
   color:rgb(83, 23, 224);
   border:none;
   float:right;
   text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
+  user-select: none;
 }
 
 .boton-eliminar{
   display:block;
-  font-size: 1em;
+  font-size: 1rem;
   color:rgb(255, 37, 99);
   border:none;
+  user-select: none;
 }

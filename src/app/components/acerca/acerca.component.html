@@ -1,69 +1,70 @@
 <div *ngFor="let persona of datosPersona" class="container seccion">
 
+  <div class="reticula-acerca">
 
-  <div class="caja-edicion acerca">
+      <div class="caja-edicion acerca item-banner">
 
-    <app-boton
-      *ngIf="logeado"
-      claseBoton="boton-edicion"
-      (btnClick)="editar()"
-      icono="fas fa-pencil-alt">
-    </app-boton>
+        <app-boton
+          *ngIf="logeado"
+          claseBoton="boton-edicion"
+          (btnClick)="editar()"
+          icono="fas fa-pencil-alt">
+        </app-boton>
 
-    <img
-      [src]="persona.banner"
-      alt="Banner"
-      class="banner img-fluid"
-    >
+        <img
+          [src]="persona.banner"
+          alt="Banner"
+          class="banner img-fluid"
+        >
+      </div>
 
-  </div>
+      <div class="caja-edicion item-perfil">
+        <app-boton
+          *ngIf="logeado"
+          claseBoton="boton-edicion"
+          (btnClick)="editar()"
+          icono="fas fa-pencil-alt">
+        </app-boton>
 
-  <div class="caja-edicion perfil">
-    <app-boton
-      *ngIf="logeado"
-      claseBoton="boton-edicion"
-      (btnClick)="editar()"
-      icono="fas fa-pencil-alt">
-    </app-boton>
-
-    <img
-      [src]="persona.foto"
-      alt="foto"
-      class="foto-perfil img-fluid"
-    >
-  </div>
+        <img
+          [src]="persona.foto"
+          alt="foto"
+          class="foto-perfil img-fluid"
+        >
+      </div>
 
 
-  <div class="caja-edicion acerca">
-    <app-boton
-      *ngIf="logeado"
-      claseBoton="boton-edicion"
-      (btnClick)="editar()"
-      icono="fas fa-pencil-alt">
-    </app-boton>
-    <h3 class="nombre">{{persona.nombre}}</h3>
-  </div>
+      <div class="caja-edicion acerca item-nombre">
+        <app-boton
+          *ngIf="logeado"
+          claseBoton="boton-edicion"
+          (btnClick)="editar()"
+          icono="fas fa-pencil-alt">
+        </app-boton>
+        <h3 class="nombre">{{persona.nombre}}</h3>
+      </div>
 
-  <div class="caja-edicion acerca">
-    <app-boton
-      *ngIf="logeado"
-      claseBoton="boton-edicion"
-      (btnClick)="editar()"
-      icono="fas fa-pencil-alt">
-    </app-boton>
-    <h2 class="titulo">{{persona.titulo}}</h2>
-  </div>
+      <div class="caja-edicion acerca item-titulo">
+        <app-boton
+          *ngIf="logeado"
+          claseBoton="boton-edicion"
+          (btnClick)="editar()"
+          icono="fas fa-pencil-alt">
+        </app-boton>
+        <h2 class="titulo">{{persona.titulo}}</h2>
+      </div>
 
-  <span class="campo">SOBRE MI:</span>
+      <div class="caja-edicion acerca item-descripcion">
+        <app-boton
+          *ngIf="logeado"
+          claseBoton="boton-edicion"
+          (btnClick)="editar()"
+          icono="fas fa-pencil-alt">
+        </app-boton>
+        <span class="campo">SOBRE MI:</span>
+        <p class="contenido">{{persona.descripcion}}</p>
+      </div>
 
-  <div class="caja-edicion acerca">
-    <app-boton
-      *ngIf="logeado"
-      claseBoton="boton-edicion"
-      (btnClick)="editar()"
-      icono="fas fa-pencil-alt">
-    </app-boton>
-    <p class="contenido">{{persona.descripcion}}</p>
-  </div>
+    </div>
 
 </div>
