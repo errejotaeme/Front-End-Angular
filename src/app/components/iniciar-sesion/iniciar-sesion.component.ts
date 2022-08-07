@@ -22,4 +22,13 @@ export class IniciarSesionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get Usuario(){
+    return this.formulario.get('usuario');
+  }
+
+  get Password(){
+    return this.formulario.get('password');
+  }
+
+
 }
