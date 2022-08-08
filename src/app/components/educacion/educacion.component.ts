@@ -14,8 +14,7 @@ export class EducacionComponent implements OnInit {
   agregarItem:boolean = false;
 
   constructor(
-    private datosPortfolio: PortfolioService,
-    ) { }
+    private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos('educacion').subscribe(data => {
@@ -25,10 +24,6 @@ export class EducacionComponent implements OnInit {
 
   modalAgregar(){
     this.agregarItem = !this.agregarItem;
-  }
-
-  actualizar(cambios:Educacion){
-    this.datosPortfolio.actualizarDatos(cambios, "educacion").subscribe()
   }
 
   alta(registro:Educacion){

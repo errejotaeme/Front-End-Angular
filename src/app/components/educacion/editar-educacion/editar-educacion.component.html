@@ -1,0 +1,114 @@
+<div class="fondo-modal">
+  <div class="contenido-modal">
+
+    <app-boton
+      claseBoton="boton-cerrar"
+      (btnClick)="cerrarModal()"
+      icono="fas fa-window-close"
+      titulo="Cancelar y cerrar"
+    ></app-boton>
+
+    <h1 class="titulo-modal">EDITAR DATOS</h1>
+
+    <p class="aclaracion">Todos los campos del fomulario son requeridos.
+      Puede <strong>restaurar los valores originales</strong> y modificar solo lo necesario.
+    </p>
+
+    <app-boton
+      claseBoton="boton-restaurar"
+      (btnClick)="restaurarValores()"
+      icono="fas fa-undo"
+      titulo="Restaurar valores originales"
+    ></app-boton>
+
+      <form (ngSubmit)="enviar($event)" [formGroup]="formulario">
+
+        <div class="form-group">
+          <label class="campo" for="escuela">Institución:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="escuela"
+            [ngClass]="{'is-invalid': Escuela?.errors && Escuela?.touched, 'is-valid': !Escuela?.errors && Escuela?.touched}"
+          >
+          <div *ngIf="Escuela?.errors && Escuela?.touched">
+            <p *ngIf="Escuela?.hasError('required')" class="text-danger">
+              Debe ingresar una institución.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="titulo">Titulo:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="titulo"
+            [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}"
+          >
+          <div *ngIf="Titulo?.errors && Titulo?.touched">
+            <p *ngIf="Titulo?.hasError('required')" class="text-danger">
+              Debe ingresar el título o nombre del curso.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="comentario">Descripción:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="comentario"
+            [ngClass]="{'is-invalid': Comentario?.errors && Comentario?.touched, 'is-valid': !Comentario?.errors && Comentario?.touched}"
+          >
+          <div *ngIf="Comentario?.errors && Comentario?.touched">
+            <p *ngIf="Comentario?.hasError('required')" class="text-danger">
+              Debe ingresar una descripción o comentario.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="inicio">Fecha de inicio:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="inicio"
+            [ngClass]="{'is-invalid': Inicio?.errors && Inicio?.touched, 'is-valid': !Inicio?.errors && Inicio?.touched}"
+          >
+          <div *ngIf="Inicio?.errors && Inicio?.touched">
+            <p *ngIf="Inicio?.hasError('required')" class="text-danger">
+              Debe ingresar la fecha de inicio del curso.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="fin">Finalizado:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="fin"
+            [ngClass]="{'is-invalid': Fin?.errors && Fin?.touched, 'is-valid': !Fin?.errors && Fin?.touched}"
+          >
+          <div *ngIf="Fin?.errors && Fin?.touched">
+            <p *ngIf="Fin?.hasError('required')" class="text-danger">
+              Debe ingresar la fecha de finalización del curso.
+            </p>
+          </div>
+        </div>
+
+        <p class="subtitulo">DATOS A ENVIAR:</p>
+        <pre class="resultado">{{formulario.value | json}}</pre>
+
+        <input type="submit" value="Confirmar cambios" [disabled]="!formulario.valid" class="enviar-formulario">
+      </form>
+
+      <app-boton
+        claseBoton="boton-cerrar"
+        (btnClick)="cerrarModal()"
+        icono="fas fa-window-close"
+        titulo="Cancelar y cerrar"
+      ></app-boton>
+    </div>
+  </div>

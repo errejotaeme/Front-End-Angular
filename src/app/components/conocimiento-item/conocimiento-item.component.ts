@@ -9,7 +9,7 @@ import { Conocimiento } from 'src/app/interfaces/conocimiento';
 export class ConocimientoItemComponent implements OnInit {
 
   @Input() conocimiento:any;
-  @Output() actualizarDatos = new EventEmitter();
+
   @Output() borrarDatos = new EventEmitter();
 
   editarItem:boolean = false;
@@ -30,13 +30,8 @@ export class ConocimientoItemComponent implements OnInit {
     this.eliminarItem = !this.eliminarItem;
   }
 
-  transmitirEdicion(cambios:Conocimiento){
-    this.actualizarDatos.emit(cambios)
-  }
-
   transmitirObjeto(borrar:Conocimiento){
     this.borrarDatos.emit(borrar)
   }
-
 
 }

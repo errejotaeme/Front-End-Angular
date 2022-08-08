@@ -9,11 +9,8 @@ import { Experiencia } from 'src/app/interfaces/experiencia';
 export class ExperienciaItemComponent implements OnInit {
   @Input() experiencia:any=[];
 
-  @Output() actualizarDatos = new EventEmitter();
   @Output() borrarDatos = new EventEmitter();
 
-  //debe tomar el valor que me retorne el servicio que controla inicio sesion
-  logeado:boolean=true;
   editarItem:boolean = false;
   eliminarItem:boolean = false;
 
@@ -28,10 +25,6 @@ export class ExperienciaItemComponent implements OnInit {
 
   modalEliminar(){
     this.eliminarItem = !this.eliminarItem;
-  }
-
-  transmitirEdicion(cambios:Experiencia){
-    this.actualizarDatos.emit(cambios)
   }
 
   transmitirObjeto(borrar:Experiencia){

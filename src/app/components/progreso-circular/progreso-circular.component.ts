@@ -18,13 +18,13 @@ export class ProgresoCircularComponent implements OnInit {
     if(Number(this.porcentaje) <= 50){
       let x:number = (Number(this.porcentaje) / 100) * 360;
       let y:string = x.toString();
-      this.rotarBlanco['transform'] = 'rotate(' +y+ 'deg)';
+      this.rotarBlanco['transform'] = 'rotate(' + y + 'deg)';
       this.rotarNegro['transform'] = 'rotate(0deg)';
       this.rotarNegro['visibility'] = 'hidden';
     }else{
       let x:number = ((Number(this.porcentaje) -50) / 100) * 360;
       let y:string = x.toString();
-      this.rotarNegro['transform'] = 'rotate(' +y+ 'deg)';
+      this.rotarNegro['transform'] = 'rotate(' + y + 'deg)';
       this.rotarNegro['visibility'] = '';
       this.rotarBlanco['transform'] = 'rotate(180deg)';
     }

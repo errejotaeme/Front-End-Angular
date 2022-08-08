@@ -13,7 +13,6 @@ export class EditarAcercaComponent implements OnInit {
   @Output() cerrar = new EventEmitter();
 
   formulario:FormGroup = new FormGroup({});
-  x:any;
 
   constructor(
     private formBuilder:FormBuilder,
@@ -66,7 +65,8 @@ export class EditarAcercaComponent implements OnInit {
 
   enviar(event:Event){
     event.preventDefault;
-    this.datosPortfolio.actualizarDatos(this.formulario.value, "persona").subscribe();
+    const form:Persona = this.formulario.value;
+    this.datosPortfolio.actualizarDatos(form, "persona").subscribe();
     alert("Se han editado los datos. Actualice el navegador para ver correctamente los cambios.");
     this.cerrarModal();
   }

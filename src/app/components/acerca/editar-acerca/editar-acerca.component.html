@@ -101,7 +101,7 @@
         <p class="subtitulo">DATOS A ENVIAR:</p>
         <pre class="resultado">{{formulario.value | json}}</pre>
 
-        <input type="submit" value="Confirmar cambios" class="enviar-formulario">
+        <input type="submit" value="Confirmar cambios" [disabled]="!formulario.valid" class="enviar-formulario">
       </form>
 
       <app-boton

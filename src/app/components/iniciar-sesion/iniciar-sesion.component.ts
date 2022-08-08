@@ -41,12 +41,10 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   enviar(event:Event){
-    event.preventDefault;
+    event.preventDefault;  //cancela el curso normal del submit
     this.autenticacionService.iniciarSesion(this.formulario.value).subscribe(data=>{
       console.log("DATA: " + JSON.stringify(data));
       this.ruta.navigate(['/portfolio']);
     })
   }
-
-
 }

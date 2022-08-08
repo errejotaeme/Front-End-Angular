@@ -12,11 +12,11 @@
   "educacion": [
     {
       "id": "1",
-      "escuela": "Instituto Saint Jean",
-      "titulo": "Perito mercantil con especialización contable e impositiva",
       "comentario": "Título secundario.",
+      "escuela": "Instituto Saint Jean",
+      "fin": "Diciembre 2006",
       "inicio": "Marzo 2005",
-      "fin": "Diciembre 2006"
+      "titulo": "Perito mercantil con especialización contable e impositiva"
     },
     {
       "id": "2",
@@ -36,11 +36,11 @@
     },
     {
       "id": "4",
-      "escuela": "Coursera",
-      "titulo": "Álgebra básica",
       "comentario": "Acceso a la plataforma facilitado por programa del Gobierno de la Ciudad. Registro: https://www.coursera.org/account/accomplishments/verify/NSDC2WG5S5WY",
+      "escuela": "Coursera",
+      "fin": "11/10/2020",
       "inicio": "3/9/2020",
-      "fin": "11/10/2020"
+      "titulo": "Álgebra básica"
     },
     {
       "id": "5",
@@ -60,11 +60,11 @@
     },
     {
       "id": "7",
-      "escuela": "Coursera",
-      "titulo": "Comportamiento adaptativo",
       "comentario": "Acceso a la plataforma facilitado por programa del Gobierno de la Ciudad. Registro: https://www.coursera.org/account/accomplishments/verify/NAEJLTLR32MS",
+      "escuela": "Coursera",
+      "fin": "9/12/2020",
       "inicio": "26/10/2020",
-      "fin": "9/12/2020"
+      "titulo": "Comportamiento adaptativo"
     },
     {
       "id": "8",
@@ -145,8 +145,8 @@
     },
     {
       "id": "5",
-      "nombre": "Prueba corta",
-      "progreso": "63"
+      "nombre": "Ultima prueba",
+      "progreso": 73
     }
   ]
 }

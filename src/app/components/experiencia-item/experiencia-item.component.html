@@ -2,7 +2,6 @@
   <span class="indice-item">{{experiencia.id}}</span>
 
   <app-boton
-    *ngIf="logeado"
     claseBoton="boton-edicion"
     (btnClick)="modalEdicion()"
     icono="fas fa-pencil-alt"
@@ -17,7 +16,6 @@
   <span class="campo">Hasta:</span><p class="contenido">{{experiencia.fin}}</p>
 
   <app-boton
-    *ngIf="logeado"
     claseBoton="boton-edicion"
     (btnClick)="modalEliminar()"
     icono="fa-solid fa-delete-left"
@@ -25,11 +23,10 @@
   ></app-boton>
 
   <div *ngIf ="editarItem == true">
-    <app-modal-edicion
+    <app-editar-experiencia
       [objetoEdicion]="experiencia"
       (cerrar)="modalEdicion()"
-      (editarRegistro)="transmitirEdicion($event)"
-    ></app-modal-edicion>
+    ></app-editar-experiencia>
   </div>
 
   <div *ngIf ="eliminarItem == true">

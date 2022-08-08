@@ -1,0 +1,75 @@
+<div class="fondo-modal">
+  <div class="contenido-modal">
+
+    <app-boton
+      claseBoton="boton-cerrar"
+      (btnClick)="cerrarModal()"
+      icono="fas fa-window-close"
+      titulo="Cancelar y cerrar"
+    ></app-boton>
+
+    <h1 class="titulo-modal">EDITAR DATOS</h1>
+
+    <p class="aclaracion">Todos los campos del fomulario son requeridos.
+      Puede <strong>restaurar los valores originales</strong> y modificar solo lo necesario.
+    </p>
+
+    <app-boton
+      claseBoton="boton-restaurar"
+      (btnClick)="restaurarValores()"
+      icono="fas fa-undo"
+      titulo="Restaurar valores originales"
+    ></app-boton>
+
+      <form (ngSubmit)="enviar($event)" [formGroup]="formulario">
+
+        <div class="form-group">
+          <label class="campo" for="nombre">Nombre:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="nombre"
+            [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid': !Nombre?.errors && Nombre?.touched}"
+          >
+          <div *ngIf="Nombre?.errors && Nombre?.touched">
+            <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+              Debe ingresar un nombre.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="progreso">Progreso:</label>
+          <input
+            type="number"
+            class="form-control campo-formulario"
+            formControlName="progreso"
+            [ngClass]="{'is-invalid': Progreso?.errors && Progreso?.touched, 'is-valid': !Progreso?.errors && Progreso?.touched}"
+          >
+          <div *ngIf="Progreso?.errors && Progreso?.touched">
+            <p *ngIf="Progreso?.hasError('required')" class="text-danger">
+              Debe ingresar un número ente 0 y 100.
+            </p>
+            <p *ngIf="Progreso?.hasError('min')" class="text-danger">
+              Debe ingresar un número ente 0 y 100.
+            </p>
+            <p *ngIf="Progreso?.hasError('max')" class="text-danger">
+              Debe ingresar un número ente 0 y 100.
+            </p>
+          </div>
+        </div>
+
+        <p class="subtitulo">DATOS A ENVIAR:</p>
+        <pre class="resultado">{{formulario.value | json}}</pre>
+
+        <input type="submit" [disabled]="!formulario.valid" value="Confirmar cambios" class="enviar-formulario">
+      </form>
+
+      <app-boton
+        claseBoton="boton-cerrar"
+        (btnClick)="cerrarModal()"
+        icono="fas fa-window-close"
+        titulo="Cancelar y cerrar"
+      ></app-boton>
+    </div>
+  </div>

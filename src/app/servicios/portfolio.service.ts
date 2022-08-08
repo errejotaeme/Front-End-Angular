@@ -1,12 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-
-import { Educacion } from '../interfaces/educacion';
-import { Experiencia } from '../interfaces/experiencia';
-import { Persona } from '../interfaces/persona';
-import { Conocimiento } from '../interfaces/conocimiento';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -25,24 +19,23 @@ export class PortfolioService {
 
   obtenerDatos(tabla:string): Observable <any>{
     return this.http.get(`${this.apiUrl}/${tabla}`);
-    //antes: return this.http.get(./assets...json);
   }
 
-  actualizarDatos(cambios:(Educacion | Experiencia | Conocimiento), tabla:string): Observable<(Educacion | Experiencia | Conocimiento)>{
+  actualizarDatos(cambios:any, tabla:string): Observable<any>{
     const url = `${this.apiUrl}/${tabla}/${cambios.id}`;
-    return this.http.put<(Educacion | Experiencia | Conocimiento)>(url, cambios, httpOptions);
+    return this.http.put<any>(url, cambios, httpOptions);
   }
 
-  agregarRegistro(registro:(Educacion | Experiencia | Conocimiento), tabla:string): Observable<(Educacion | Experiencia | Conocimiento)>{
+  agregarRegistro(registro:any, tabla:string): Observable<any>{
     const url = `${this.apiUrl}/${tabla}`;
-    return this.http.post<(Educacion | Experiencia | Conocimiento)>(url, registro, httpOptions);
+    return this.http.post<any>(url, registro, httpOptions);
   }
 
-  borrarDatos(borrar:(Educacion | Experiencia | Conocimiento), tabla:string): Observable<(Educacion | Experiencia | Conocimiento)>{
+  borrarDatos(borrar:any, tabla:string): Observable<any>{
     const url = `${this.apiUrl}/${tabla}/${borrar.id}`;
-    return this.http.delete<(Educacion | Experiencia | Conocimiento)>(url);
+    return this.http.delete<any>(url);
   }
 
 }
 
-//Modificar datos de persona hacerlo aparte
+/*DEBO UTILIZAR INTERCEPTOR PARA QUE LE AGREGUE EL TOKEN  ALENCABEZADO DEL MENSAJE ANTES DE HACER LA LLAMADA A LA API*/

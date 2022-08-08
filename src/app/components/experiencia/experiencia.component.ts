@@ -26,10 +26,6 @@ export class ExperienciaComponent implements OnInit {
     this.agregarItem = !this.agregarItem;
   }
 
-  actualizar(cambios:Experiencia){
-    this.datosPortfolio.actualizarDatos(cambios, "experiencias").subscribe()
-  }
-
   alta(registro:Experiencia){
     this.datosPortfolio.agregarRegistro(registro, "experiencias").subscribe(registro => {
       this.experienciaLista.push(registro);

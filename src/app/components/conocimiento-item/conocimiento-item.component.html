@@ -1,41 +1,40 @@
 <div class="caja-edicion">
+  <span class="indice-item">{{conocimiento.id}}</span>
 
     <app-boton
-
       claseBoton="boton-edicion"
       (btnClick)="modalEdicion()"
       icono="fas fa-pencil-alt"
       titulo="Editar"
     ></app-boton>
 
-  <p class="contenido">{{conocimiento.nombre}}</p>
+    <p class="contenido">{{conocimiento.nombre}}</p>
 
-  <app-progreso-circular
-    porcentaje="{{progreso}}"
-  ></app-progreso-circular>
+    <app-progreso-circular
+      porcentaje="{{progreso}}"
+    ></app-progreso-circular>
 
-  <app-boton
-    claseBoton="boton-edicion"
-    (btnClick)="modalEliminar()"
-    icono="fa-solid fa-delete-left"
-    titulo="Eliminar"
-  ></app-boton>
+    <app-boton
+      claseBoton="boton-edicion"
+      (btnClick)="modalEliminar()"
+      icono="fa-solid fa-delete-left"
+      titulo="Eliminar"
+    ></app-boton>
 
-  <div *ngIf ="editarItem == true">
-    <app-modal-edicion
-      [objetoEdicion]="conocimiento"
-      (cerrar)="modalEdicion()"
-      (editarRegistro)="transmitirEdicion($event)"
-    ></app-modal-edicion>
-  </div>
+    <div *ngIf ="editarItem == true">
+      <app-editar-conocimientos
+        [objetoEdicion]="conocimiento"
+        (cerrar)="modalEdicion()"
+      ></app-editar-conocimientos>
+    </div>
 
 
-  <div *ngIf ="eliminarItem == true">
-    <app-modal-eliminar
-      [objetoAEliminar]="conocimiento"
-      (cerrar)="modalEliminar()"
-      (eliminarRegistro)="transmitirObjeto($event)"
-    ></app-modal-eliminar>
-  </div>
+    <div *ngIf ="eliminarItem == true">
+      <app-modal-eliminar
+        [objetoAEliminar]="conocimiento"
+        (cerrar)="modalEliminar()"
+        (eliminarRegistro)="transmitirObjeto($event)"
+      ></app-modal-eliminar>
+    </div>
 
 </div>

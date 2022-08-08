@@ -22,7 +22,6 @@
       <app-experiencia-item
         *ngFor="let experiencia of experienciaLista"
         [experiencia]="experiencia"
-        (actualizarDatos)="actualizar($event)"
         (borrarDatos)="eliminar($event)"
       ></app-experiencia-item>
     </div>

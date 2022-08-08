@@ -19,13 +19,15 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { BotonComponent } from './components/boton/boton.component';
 import { CompletoComponent } from './components/completo/completo.component';
 import { PortfolioService } from './servicios/portfolio.service';
-import { ModalEdicionComponent } from './components/modal-edicion/modal-edicion.component';
 import { ModalAgregarComponent } from './components/modal-agregar/modal-agregar.component';
 import { ModalEliminarComponent } from './components/modal-eliminar/modal-eliminar.component';
 import { ProgresoCircularComponent } from './components/progreso-circular/progreso-circular.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { EditarAcercaComponent } from './components/acerca/editar-acerca/editar-acerca.component';
+import { EditarConocimientosComponent } from './components/conocimientos/editar-conocimientos/editar-conocimientos.component';
+import { EditarEducacionComponent } from './components/educacion/editar-educacion/editar-educacion.component';
+import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +44,15 @@ import { EditarAcercaComponent } from './components/acerca/editar-acerca/editar-
     EducacionItemComponent,
     ExperienciaItemComponent,
     ConocimientoItemComponent,
-    ModalEdicionComponent,
     ModalAgregarComponent,
     ModalEliminarComponent,
     ProgresoCircularComponent,
     IniciarSesionComponent,
     PortfolioComponent,
-    EditarAcercaComponent
+    EditarAcercaComponent,
+    EditarConocimientosComponent,
+    EditarEducacionComponent,
+    EditarExperienciaComponent
   ],
   imports: [
     BrowserModule,

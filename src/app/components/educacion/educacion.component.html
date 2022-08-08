@@ -23,7 +23,6 @@
         <app-educacion-item
           *ngFor="let educacion of educacionLista"
           [educacion]="educacion"
-          (actualizarDatos)="actualizar($event)"
           (borrarDatos)="eliminar($event)"
         ></app-educacion-item>
       </div>

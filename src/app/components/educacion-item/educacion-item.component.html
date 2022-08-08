@@ -22,11 +22,10 @@
     ></app-boton>
 
     <div *ngIf ="editarItem == true">
-      <app-modal-edicion
+      <app-editar-educacion
         [objetoEdicion]="educacion"
         (cerrar)="modalEdicion()"
-        (editarRegistro)="transmitirEdicion($event)"
-      ></app-modal-edicion>
+      ></app-editar-educacion>
     </div>
 
 

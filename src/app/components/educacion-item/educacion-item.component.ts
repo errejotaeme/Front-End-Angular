@@ -9,7 +9,7 @@ import { Educacion } from 'src/app/interfaces/educacion';
 export class EducacionItemComponent implements OnInit {
 
   @Input() educacion:any;
-  @Output() actualizarDatos = new EventEmitter();
+
   @Output() borrarDatos = new EventEmitter();
 
   editarItem:boolean = false;
@@ -27,10 +27,6 @@ export class EducacionItemComponent implements OnInit {
 
   modalEliminar(){
     this.eliminarItem = !this.eliminarItem;
-  }
-
-  transmitirEdicion(cambios:Educacion){
-    this.actualizarDatos.emit(cambios)
   }
 
   transmitirObjeto(borrar:Educacion){

@@ -26,10 +26,6 @@ export class ConocimientosComponent implements OnInit {
     this.agregarItem = !this.agregarItem;
   }
 
-  actualizar(cambios:Conocimiento){
-    this.datosPortfolio.actualizarDatos(cambios, "conocimientos").subscribe()
-  }
-
   alta(registro:Conocimiento){
     this.datosPortfolio.agregarRegistro(registro, "conocimientos").subscribe(registro => {
       this.conocimientosLista.push(registro);

@@ -59,7 +59,7 @@ body.tema-oscuro {
 
 .caja-edicion{
   max-width:33vw;
-  overflow-x: scroll;
+  overflow-x: auto;
   height: fit-content;
   padding: 0.5rem 0.5rem;
   margin-top:2vh;
@@ -67,6 +67,10 @@ body.tema-oscuro {
   background: linear-gradient(315deg, rgba(0, 0, 0, 0.267), rgba(255, 255, 255, 0.127) );
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
