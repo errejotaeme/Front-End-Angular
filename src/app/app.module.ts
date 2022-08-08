@@ -25,6 +25,7 @@ import { ModalEliminarComponent } from './components/modal-eliminar/modal-elimin
 import { ProgresoCircularComponent } from './components/progreso-circular/progreso-circular.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { EditarAcercaComponent } from './components/acerca/editar-acerca/editar-acerca.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     ModalEliminarComponent,
     ProgresoCircularComponent,
     IniciarSesionComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    EditarAcercaComponent
   ],
   imports: [
     BrowserModule,

@@ -9,12 +9,11 @@ import { Persona } from 'src/app/interfaces/persona';
 })
 export class AcercaComponent implements OnInit {
 
-  //debe tomar el valor que me retorne el servicio que controla inicio sesion
-  logeado:boolean=true;
-
   datosPersona:Persona[] = [];
+  editarItem:boolean = false;
 
-  constructor(private datosPortfolio: PortfolioService) { }
+  constructor(private datosPortfolio: PortfolioService) {
+   }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos('persona').subscribe(data => {
@@ -22,8 +21,8 @@ export class AcercaComponent implements OnInit {
     });
   }
 
-  editar(){
-    console.log("Abro modal de edicion")
+  modalEdicion(){
+    this.editarItem = !this.editarItem;
   }
 
 }

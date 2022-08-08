@@ -28,7 +28,6 @@ export class ProgresoCircularComponent implements OnInit {
       this.rotarNegro['visibility'] = '';
       this.rotarBlanco['transform'] = 'rotate(180deg)';
     }
-    console.log(this.rotarBlanco, this.rotarNegro )
   }
 
 }

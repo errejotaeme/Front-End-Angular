@@ -2,7 +2,6 @@
   <span class="indice-item">{{educacion.id}}</span>
 
     <app-boton
-      *ngIf="logeado"
       claseBoton="boton-edicion"
       (btnClick)="modalEdicion()"
       icono="fas fa-pencil-alt"
@@ -16,7 +15,6 @@
     <span class="campo">Finalizado:</span><p class="contenido">{{educacion.fin}}</p>
 
     <app-boton
-      *ngIf="logeado"
       claseBoton="boton-edicion"
       (btnClick)="modalEliminar()"
       icono="fa-solid fa-delete-left"

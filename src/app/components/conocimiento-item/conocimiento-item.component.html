@@ -1,7 +1,7 @@
 <div class="caja-edicion">
 
     <app-boton
-      *ngIf="logeado"
+
       claseBoton="boton-edicion"
       (btnClick)="modalEdicion()"
       icono="fas fa-pencil-alt"
@@ -15,7 +15,6 @@
   ></app-progreso-circular>
 
   <app-boton
-    *ngIf="logeado"
     claseBoton="boton-edicion"
     (btnClick)="modalEliminar()"
     icono="fa-solid fa-delete-left"

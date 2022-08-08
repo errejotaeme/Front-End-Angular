@@ -52,8 +52,8 @@
 }
 .rotar-blanco{
   background: linear-gradient(270deg, rgb(234, 234, 234) 50%, rgba(0, 0, 0, 0) 0%);
-  width:8.2vw;
-  height:8.2vw;
+  width:8vw;
+  height:8vw;
   margin:auto auto;
   border-radius: 50%;
   grid-area: 1/1/2/2;

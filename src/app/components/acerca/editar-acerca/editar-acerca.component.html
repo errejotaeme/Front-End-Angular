@@ -1,0 +1,114 @@
+<div class="fondo-modal">
+  <div class="contenido-modal">
+
+    <app-boton
+      claseBoton="boton-cerrar"
+      (btnClick)="cerrarModal()"
+      icono="fas fa-window-close"
+      titulo="Cancelar y cerrar"
+    ></app-boton>
+
+    <h1 class="titulo-modal">EDITAR DATOS</h1>
+
+    <p class="aclaracion">Todos los campos del fomulario son requeridos.
+      Puede <strong>restaurar los valores originales</strong> y modificar solo lo necesario.
+    </p>
+
+    <app-boton
+      claseBoton="boton-restaurar"
+      (btnClick)="restaurarValores()"
+      icono="fas fa-undo"
+      titulo="Restaurar valores originales"
+    ></app-boton>
+
+      <form (ngSubmit)="enviar($event)" [formGroup]="formulario">
+
+        <div class="form-group">
+          <label class="campo" for="nombre">Nombre:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="nombre"
+            [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid': !Nombre?.errors && Nombre?.touched}"
+          >
+          <div *ngIf="Nombre?.errors && Nombre?.touched">
+            <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+              Debe ingresar un nombre.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="banner">Banner:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="banner"
+            [ngClass]="{'is-invalid': Banner?.errors && Banner?.touched, 'is-valid': !Banner?.errors && Banner?.touched}"
+          >
+          <div *ngIf="Banner?.errors && Banner?.touched">
+            <p *ngIf="Banner?.hasError('required')" class="text-danger">
+              Debe ingresar una dirección.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="foto">Foto:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="foto"
+            [ngClass]="{'is-invalid': Foto?.errors && Foto?.touched, 'is-valid': !Foto?.errors && Foto?.touched}"
+          >
+          <div *ngIf="Foto?.errors && Foto?.touched">
+            <p *ngIf="Foto?.hasError('required')" class="text-danger">
+              Debe ingresar una dirección.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="titulo">Titulo:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="titulo"
+            [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}"
+          >
+          <div *ngIf="Titulo?.errors && Titulo?.touched">
+            <p *ngIf="Titulo?.hasError('required')" class="text-danger">
+              Debe ingresar un título.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="descripcion">Descripción:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            formControlName="descripcion"
+            [ngClass]="{'is-invalid': Descripcion?.errors && Descripcion?.touched, 'is-valid': !Descripcion?.errors && Descripcion?.touched}"
+          >
+          <div *ngIf="Descripcion?.errors && Descripcion?.touched">
+            <p *ngIf="Descripcion?.hasError('required')" class="text-danger">
+              Debe ingresar una descripción.
+            </p>
+          </div>
+        </div>
+
+        <p class="subtitulo">DATOS A ENVIAR:</p>
+        <pre class="resultado">{{formulario.value | json}}</pre>
+
+        <input type="submit" value="Confirmar cambios" class="enviar-formulario">
+      </form>
+
+      <app-boton
+        claseBoton="boton-cerrar"
+        (btnClick)="cerrarModal()"
+        icono="fas fa-window-close"
+        titulo="Cancelar y cerrar"
+      ></app-boton>
+    </div>
+  </div>

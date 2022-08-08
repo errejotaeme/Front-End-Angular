@@ -10,7 +10,7 @@
 }
 
 .boton-header:hover{
-  color:rgb(128, 128, 128) !important;
+  color:rgb(83, 23, 224) !important;
   border: none !important;
 }
 
@@ -36,8 +36,8 @@
 
 .boton-cerrar {
   display:block;
-  font-size: 2rem;
-  color:rgb(83, 23, 224);
+  font-size: 1rem;
+  color:rgb(227, 16, 16);
   border:none;
   float:right;
   text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
@@ -49,5 +49,15 @@
   font-size: 1rem;
   color:rgb(255, 37, 99);
   border:none;
+  user-select: none;
+}
+
+.boton-restaurar{
+  display:block;
+  font-size: 2rem;
+  color:rgb(83, 23, 224);
+  border:none;
+  margin:auto;
+  text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
   user-select: none;
 }

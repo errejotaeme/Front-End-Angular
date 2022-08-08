@@ -1,5 +1,6 @@
 {
 	"persona": [{
+    "id": "1",
 		"nombre": "Juan Manuel Rodríguez Miguel",
 		"banner": "../../assets/imagenes/banner.png",
 		"foto": "../../assets/imagenes/foto.png",

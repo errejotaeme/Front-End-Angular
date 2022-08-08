@@ -12,7 +12,6 @@ export class ConocimientosComponent implements OnInit {
 
   conocimientosLista:Conocimiento[] = [];
 
-  logeado:boolean=true; //traigo desde otro servicio
   agregarItem:boolean = false;
 
   constructor(private datosPortfolio: PortfolioService) { }

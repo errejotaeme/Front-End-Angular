@@ -132,7 +132,7 @@ body.tema-oscuro {
 }
 
 .enviar-formulario{
-  background-color: rgb(111, 255, 200);
+  background-color: rgb(0, 255, 183);
   margin-bottom: 2em;
   margin-top:2em;
   padding:0.5em 0.5em;
@@ -142,8 +142,22 @@ body.tema-oscuro {
 }
 
 .aclaracion{
-  background-color: rgb(255, 203, 31);
-  padding: 1.5vw 1.5vw;
+  background-color: rgb(0, 255, 183);
+  padding: 1rem 1rem;
   width: fit-content;
   margin:1em auto;
+}
+
+.subtitulo{
+  color:rgb(45, 45, 45);
+  margin-top:2rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  letter-spacing: 0.07rem;
+}
+
+.resultado{
+  background-color: rgb(45, 45, 45);
+  color:rgb(200, 200, 200);
+  padding: 1rem 1rem;
 }
