@@ -10,7 +10,7 @@
 }
 
 .boton-header:hover{
-  color:rgb(83, 23, 224) !important;
+  color:rgb(224, 167, 23) !important;
   border: none !important;
 }
 
@@ -21,6 +21,9 @@
   border:none;
   text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
   user-select: none;
+}
+.boton-edicion:hover{
+  color:rgb(224, 167, 23);
 }
 
 .boton-agregar {
@@ -33,6 +36,9 @@
   position: relative;
   user-select: none;
 }
+.boton-agregar:hover{
+  color:rgb(224, 167, 23);
+}
 
 .boton-cerrar {
   display:block;
@@ -42,6 +48,10 @@
   float:right;
   text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
   user-select: none;
+  position:relative;
+}
+.boton-cerrar:hover{
+  color:rgb(224, 167, 23);
 }
 
 .boton-eliminar{
@@ -50,6 +60,9 @@
   color:rgb(255, 37, 99);
   border:none;
   user-select: none;
+}
+.boton-eliminar:hover{
+  color:rgb(25, 207, 34);
 }
 
 .boton-restaurar{
@@ -60,4 +73,7 @@
   margin:auto;
   text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
   user-select: none;
+}
+.boton-restaurar:hover{
+  color:rgb(224, 167, 23);
 }

@@ -1,0 +1,126 @@
+<div class="fondo-modal">
+  <div class="contenido-modal">
+
+    <app-boton
+      claseBoton="boton-cerrar"
+      (btnClick)="cerrarModal()"
+      icono="fas fa-window-close"
+      Empresa="Cancelar y cerrar"
+    ></app-boton>
+
+    <h1 class="Empresa-modal">CREAR REGISTRO</h1>
+
+    <p class="aclaracion">Todos los campos del fomulario son requeridos.</p>
+
+      <form (ngSubmit)="enviarRegistro($event)" [formGroup]="formulario">
+
+        <div class="form-group">
+          <label class="campo" for="posicion">Posición:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            placeholder="Ingresar posición"
+            formControlName="posicion"
+            [ngClass]="{'is-invalid': Posicion?.errors && Posicion?.touched, 'is-valid': !Posicion?.errors && Posicion?.touched}"
+          >
+          <div *ngIf="Posicion?.errors && Posicion?.touched">
+            <p *ngIf="Posicion?.hasError('required')" class="text-danger">
+              Debe ingresar una posición.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="empresa">Empresa:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            placeholder="Ingresar nombre de la empresa"
+            formControlName="empresa"
+            [ngClass]="{'is-invalid': Empresa?.errors && Empresa?.touched, 'is-valid': !Empresa?.errors && Empresa?.touched}"
+          >
+          <div *ngIf="Empresa?.errors && Empresa?.touched">
+            <p *ngIf="Empresa?.hasError('required')" class="text-danger">
+              Debe ingresar el nombre de la empresa.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="tareas">Tareas:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            placeholder="Breve descripción de las tareas"
+            formControlName="tareas"
+            [ngClass]="{'is-invalid': Tareas?.errors && Tareas?.touched, 'is-valid': !Tareas?.errors && Tareas?.touched}"
+          >
+          <div *ngIf="Tareas?.errors && Tareas?.touched">
+            <p *ngIf="Tareas?.hasError('required')" class="text-danger">
+              Debe ingresar una breve descripción de las tareas realizadas.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="modalidad">Modalidad:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            placeholder="Ingresar modalidad"
+            formControlName="modalidad"
+            [ngClass]="{'is-invalid': Modalidad?.errors && Modalidad?.touched, 'is-valid': !Modalidad?.errors && Modalidad?.touched}"
+          >
+          <div *ngIf="Modalidad?.errors && Modalidad?.touched">
+            <p *ngIf="Modalidad?.hasError('required')" class="text-danger">
+              Debe ingresar la modalidad de trabajo.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="inicio">Fecha de inicio:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            placeholder="Ingresar fecha"
+            formControlName="inicio"
+            [ngClass]="{'is-invalid': Inicio?.errors && Inicio?.touched, 'is-valid': !Inicio?.errors && Inicio?.touched}"
+          >
+          <div *ngIf="Inicio?.errors && Inicio?.touched">
+            <p *ngIf="Inicio?.hasError('required')" class="text-danger">
+              Debe ingresar la fecha de inicio del curso.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="campo" for="fin">Finalizado:</label>
+          <input
+            type="text"
+            class="form-control campo-formulario"
+            placeholder="Ingresar fecha"
+            formControlName="fin"
+            [ngClass]="{'is-invalid': Fin?.errors && Fin?.touched, 'is-valid': !Fin?.errors && Fin?.touched}"
+          >
+          <div *ngIf="Fin?.errors && Fin?.touched">
+            <p *ngIf="Fin?.hasError('required')" class="text-danger">
+              Debe ingresar la fecha de finalización del curso.
+            </p>
+          </div>
+        </div>
+
+        <p class="subEmpresa">REGISTRO CREADO:</p>
+        <pre class="resultado">{{formulario.value | json}}</pre>
+
+        <input type="submit" value="Enviar" [disabled]="!formulario.valid" class="enviar-formulario">
+      </form>
+
+      <app-boton
+        claseBoton="boton-cerrar"
+        (btnClick)="cerrarModal()"
+        icono="fas fa-window-close"
+        Empresa="Cancelar y cerrar"
+      ></app-boton>
+    </div>
+  </div>

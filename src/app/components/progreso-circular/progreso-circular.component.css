@@ -2,15 +2,15 @@
   background-color: rgba(255, 255, 255, 0);
   width:fit-content;
   height: fit-content;
-  padding: 1vw;
+  padding: 1rem;
   z-index: 10;
 }
 
 .borde{
   background-color: rgb(234, 234, 234);
   color:rgb(22, 22, 22);
-  width:9vw;
-  height:9vw;
+  width:9rem;
+  height:9rem;
   display:grid;
   align-items: center;
   justify-items: center;
@@ -22,8 +22,8 @@
 
 .frente-texto{
   background-color: rgb(234, 234, 234);
-  width:6.5vw;
-  height:6.5vw;
+  width:6.5rem;
+  height:6.5rem;
   margin:auto auto;
   border-radius: 50%;
   grid-area: 1/1/2/2;
@@ -32,16 +32,16 @@
 }
 
 .frente-texto p{
-  font-size:2.5vw;
+  font-size:2.3rem;
   text-align: center;
   font-weight: bolder;
   color:black;
-  margin-top: 1.5vw;
+  margin-top: 1.5rem;
 }
 .rotar-negro{
   background: linear-gradient(270deg,  rgb(23, 224, 184) 50%, rgba(0, 0, 0, 0) 0%);
-  width:8vw;
-  height:8vw;
+  width:8rem;
+  height:8rem;
   margin:auto auto;
   border-radius: 50%;
   grid-area: 1/1/2/2;
@@ -52,8 +52,8 @@
 }
 .rotar-blanco{
   background: linear-gradient(270deg, rgb(234, 234, 234) 50%, rgba(0, 0, 0, 0) 0%);
-  width:8vw;
-  height:8vw;
+  width:8rem;
+  height:8rem;
   margin:auto auto;
   border-radius: 50%;
   grid-area: 1/1/2/2;
@@ -62,8 +62,8 @@
 }
 .fijo{
   background: linear-gradient(270deg, rgb(23, 224, 184) 50%, rgba(0, 0, 0, 0) 0%);
-  width:8vw;
-  height:8vw;
+  width:8rem;
+  height:8rem;
   margin:auto auto;
   border-radius: 50%;
   grid-area: 1/1/2/2;

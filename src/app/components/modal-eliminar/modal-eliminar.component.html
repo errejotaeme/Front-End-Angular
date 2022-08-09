@@ -2,22 +2,26 @@
 <div class="fondo-modal">
   <div class="contenido-modal">
 
+    <app-boton
+      claseBoton="boton-cerrar"
+      (btnClick)="cerrarModal()"
+      icono="fas fa-window-close"
+      titulo="Cancelar y cerrar"
+    ></app-boton>
+
     <h1 class="titulo-modal">ELIMINAR DATOS</h1>
 
     <p class="aclaracion">IMPORTANTE: esta acción no se puede deshacer.</p>
 
-    <h2 class="subtitulo" >Contenido original:</h2>
+    <p class="subtitulo">DATOS A ELIMINAR:</p>
+    <pre class="resultado">{{objetoAEliminar | json}}</pre>
 
-    <div *ngFor="let campo of objetoAEliminar | keyvalue">
-      <p><b>{{campo.key}}: </b>{{campo.value}}</p>
-    </div>
-
-      <app-boton
-        claseBoton="boton-eliminar"
-        (btnClick)="eliminarObjeto()"
-        icono="fa-solid fa-check"
-        texto="ELIMINAR "
-      ></app-boton>
+    <app-boton
+      claseBoton="boton-eliminar"
+      (btnClick)="eliminarObjeto()"
+      icono="fa-solid fa-check"
+      texto="ELIMINAR "
+    ></app-boton>
 
     <app-boton
       claseBoton="boton-cerrar"

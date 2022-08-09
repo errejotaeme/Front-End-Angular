@@ -4,19 +4,17 @@
         claseBoton="boton-agregar"
         (btnClick)="modalAgregar()"
         texto=""
-        titulo="Agregar registro"
+        titulo="Agregar nuevos estudios"
         icono="fas fa-plus"
       ></app-boton>
 
       <h2 class="titulo-seccion" id="seccion-educacion">EDUCACION</h2>
 
-
       <div *ngIf ="agregarItem == true">
-        <app-modal-agregar
+        <app-agregar-educacion
           [coleccionObjetos]="educacionLista"
           (cerrar)="modalAgregar()"
-          (altaRegistro)="alta($event)"
-        ></app-modal-agregar>
+        ></app-agregar-educacion>
       </div>
 
       <div class="items">

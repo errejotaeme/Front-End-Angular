@@ -4,18 +4,17 @@
     claseBoton="boton-agregar"
     (btnClick)="modalAgregar()"
     texto=""
-    titulo="Agregar registro"
+    titulo="Agregar nuevas experiencias laborales"
     icono="fas fa-plus"
   ></app-boton>
 
   <h2 class="titulo-seccion" id="seccion-experiencia">EXPERIENCIA LABORAL</h2>
 
       <div *ngIf ="agregarItem == true">
-        <app-modal-agregar
+        <app-agregar-experiencia
           [coleccionObjetos]="experienciaLista"
           (cerrar)="modalAgregar()"
-          (altaRegistro)="alta($event)"
-        ></app-modal-agregar>
+        ></app-agregar-experiencia>
       </div>
 
     <div class="items">

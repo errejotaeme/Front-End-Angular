@@ -6,16 +6,15 @@
     claseBoton="boton-agregar"
     (btnClick)="modalAgregar()"
     texto=""
-    titulo="Agregar registro"
+    titulo="Agregar nuevos conocimientos"
     icono="fas fa-plus"
   ></app-boton>
 
   <div *ngIf ="agregarItem == true">
-    <app-modal-agregar
+    <app-agregar-conocimiento
       [coleccionObjetos]="conocimientosLista"
       (cerrar)="modalAgregar()"
-      (altaRegistro)="alta($event)"
-    ></app-modal-agregar>
+    ></app-agregar-conocimiento>
   </div>
 
   <div class="items">

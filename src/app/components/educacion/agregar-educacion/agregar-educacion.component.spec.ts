@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalAgregarComponent } from './modal-agregar.component';
+import { AgregarEducacionComponent } from './agregar-educacion.component';
 
-describe('ModalAgregarComponent', () => {
-  let component: ModalAgregarComponent;
-  let fixture: ComponentFixture<ModalAgregarComponent>;
+describe('AgregarEducacionComponent', () => {
+  let component: AgregarEducacionComponent;
+  let fixture: ComponentFixture<AgregarEducacionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalAgregarComponent ]
+      declarations: [ AgregarEducacionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalAgregarComponent);
+    fixture = TestBed.createComponent(AgregarEducacionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -13,8 +13,7 @@ export class EducacionComponent implements OnInit {
 
   agregarItem:boolean = false;
 
-  constructor(
-    private datosPortfolio: PortfolioService) { }
+  constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos('educacion').subscribe(data => {
@@ -24,12 +23,6 @@ export class EducacionComponent implements OnInit {
 
   modalAgregar(){
     this.agregarItem = !this.agregarItem;
-  }
-
-  alta(registro:Educacion){
-    this.datosPortfolio.agregarRegistro(registro, "educacion").subscribe(registro => {
-      this.educacionLista.push(registro);
-    });
   }
 
   eliminar(borrar:Educacion){

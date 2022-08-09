@@ -19,7 +19,6 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { BotonComponent } from './components/boton/boton.component';
 import { CompletoComponent } from './components/completo/completo.component';
 import { PortfolioService } from './servicios/portfolio.service';
-import { ModalAgregarComponent } from './components/modal-agregar/modal-agregar.component';
 import { ModalEliminarComponent } from './components/modal-eliminar/modal-eliminar.component';
 import { ProgresoCircularComponent } from './components/progreso-circular/progreso-circular.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
@@ -28,6 +27,9 @@ import { EditarAcercaComponent } from './components/acerca/editar-acerca/editar-
 import { EditarConocimientosComponent } from './components/conocimientos/editar-conocimientos/editar-conocimientos.component';
 import { EditarEducacionComponent } from './components/educacion/editar-educacion/editar-educacion.component';
 import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
+import { AgregarConocimientoComponent } from './components/conocimientos/agregar-conocimiento/agregar-conocimiento.component';
+import { AgregarEducacionComponent } from './components/educacion/agregar-educacion/agregar-educacion.component';
+import { AgregarExperienciaComponent } from './components/experiencia/agregar-experiencia/agregar-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,6 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
     EducacionItemComponent,
     ExperienciaItemComponent,
     ConocimientoItemComponent,
-    ModalAgregarComponent,
     ModalEliminarComponent,
     ProgresoCircularComponent,
     IniciarSesionComponent,
@@ -52,7 +53,10 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
     EditarAcercaComponent,
     EditarConocimientosComponent,
     EditarEducacionComponent,
-    EditarExperienciaComponent
+    EditarExperienciaComponent,
+    AgregarConocimientoComponent,
+    AgregarEducacionComponent,
+    AgregarExperienciaComponent
   ],
   imports: [
     BrowserModule,

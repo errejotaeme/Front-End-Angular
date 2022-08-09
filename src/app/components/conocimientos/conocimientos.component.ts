@@ -26,12 +26,6 @@ export class ConocimientosComponent implements OnInit {
     this.agregarItem = !this.agregarItem;
   }
 
-  alta(registro:Conocimiento){
-    this.datosPortfolio.agregarRegistro(registro, "conocimientos").subscribe(registro => {
-      this.conocimientosLista.push(registro);
-    });
-  }
-
   eliminar(borrar:Conocimiento){
     this.datosPortfolio.borrarDatos(borrar, "conocimientos").subscribe()
   }
