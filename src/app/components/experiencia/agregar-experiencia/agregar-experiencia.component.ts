@@ -24,7 +24,7 @@ export class AgregarExperienciaComponent implements OnInit {
 
       this.formulario = this.formBuilder.group(
         {
-          id: [this.numeroId, [Validators.required]],
+          id: [this.numeroId.toString(), [Validators.required]],
           posicion: ['', [Validators.required]],
           empresa: ['', [Validators.required]],
           tareas: ['', [Validators.required]],

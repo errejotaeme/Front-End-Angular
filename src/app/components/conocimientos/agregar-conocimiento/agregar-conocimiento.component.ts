@@ -25,7 +25,7 @@ export class AgregarConocimientoComponent implements OnInit {
 
     this.formulario = this.formBuilder.group(
       {
-        id: [this.numeroId, [Validators.required]],
+        id: [this.numeroId.toString(), [Validators.required]],
         nombre: ['', [Validators.required]],
         progreso: [, [Validators.required, Validators.min(0), Validators.max(100)]],
       }

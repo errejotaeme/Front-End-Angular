@@ -25,7 +25,7 @@ export class AgregarEducacionComponent implements OnInit {
 
       this.formulario = this.formBuilder.group(
         {
-          id: [this.numeroId, [Validators.required]],
+          id: [this.numeroId.toString(), [Validators.required]],
           escuela: ['', [Validators.required]],
           titulo: ['', [Validators.required]],
           comentario: ['', [Validators.required]],

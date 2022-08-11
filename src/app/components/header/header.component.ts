@@ -32,8 +32,8 @@ export class HeaderComponent implements OnInit {
     this.tema = !this.tema;
     }
 
-  pruebaLogin(){
-    console.log("Hice clic en login")
+  mostrarCorreo(){
+    alert("rodriguezjuanma89@outlook.com")
   }
 
 }
