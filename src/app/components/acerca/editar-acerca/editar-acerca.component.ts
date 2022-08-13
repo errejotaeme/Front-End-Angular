@@ -23,6 +23,7 @@ export class EditarAcercaComponent implements OnInit {
     this.formulario = this.formBuilder.group(
       {
         id: [this.objetoEdicion.id, [Validators.required]],
+        email: ['', [Validators.required, Validators.email]],
         nombre: ['', [Validators.required]],
         banner: ['', [Validators.required]],
         foto: ['', [Validators.required]],
@@ -35,6 +36,7 @@ export class EditarAcercaComponent implements OnInit {
   restaurarValores(){
     let valoresOriginales:Persona = this.objetoEdicion;
     this.formulario.patchValue({
+          email: valoresOriginales.email,
           nombre: valoresOriginales.nombre,
           banner: valoresOriginales.banner,
           foto: valoresOriginales.foto,
@@ -47,6 +49,9 @@ export class EditarAcercaComponent implements OnInit {
     this.cerrar.emit();
   }
 
+  get Email(){
+    return this.formulario.get('email');
+  }
   get Nombre(){
     return this.formulario.get('nombre');
   }

@@ -1,14 +1,14 @@
 <div class="container seccion">
 
-        <app-boton
+      <h2 class="titulo-seccion" id="seccion-educacion">EDUCACION</h2>
+
+      <app-boton
         claseBoton="boton-agregar"
         (btnClick)="modalAgregar()"
         texto=""
         titulo="Agregar nuevos estudios"
         icono="fas fa-plus"
       ></app-boton>
-
-      <h2 class="titulo-seccion" id="seccion-educacion">EDUCACION</h2>
 
       <div *ngIf ="agregarItem == true">
         <app-agregar-educacion
@@ -24,5 +24,4 @@
           (borrarDatos)="eliminar($event)"
         ></app-educacion-item>
       </div>
-
 </div>

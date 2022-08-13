@@ -20,11 +20,11 @@ export class AgregarExperienciaComponent implements OnInit {
     private datosPortfolio: PortfolioService) { }
 
     ngOnInit(): void {
-      this.numeroId = (this.coleccionObjetos.length + 1)
+      this.numeroId = (Number(this.coleccionObjetos[this.coleccionObjetos.length - 1].id ) + 1)
 
       this.formulario = this.formBuilder.group(
         {
-          id: [this.numeroId.toString(), [Validators.required]],
+          id: [this.numeroId, [Validators.required]],
           posicion: ['', [Validators.required]],
           empresa: ['', [Validators.required]],
           tareas: ['', [Validators.required]],

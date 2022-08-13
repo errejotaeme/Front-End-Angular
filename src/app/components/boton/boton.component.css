@@ -32,10 +32,9 @@
   color:rgb(83, 23, 224);
   border:none;
   text-shadow: 1px 2px 7px rgba(60, 60, 60, 0.57);
-  float:right;
-  position: relative;
   user-select: none;
 }
+
 .boton-agregar:hover{
   color:rgb(224, 167, 23);
 }

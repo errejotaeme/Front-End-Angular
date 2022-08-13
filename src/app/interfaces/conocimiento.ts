@@ -1,5 +1,5 @@
 export interface Conocimiento {
-  id:string;
+  id: number;
   nombre: string;
   progreso: number;
 }

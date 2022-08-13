@@ -2,6 +2,7 @@
   "persona": [
     {
       "id": "1",
+      "email": "rodriguezjuanma89@outlook.com",
       "nombre": "Juan Manuel Rodríguez Miguel",
       "banner": "../../assets/imagenes/banner.png",
       "foto": "../../assets/imagenes/foto.png",
@@ -132,11 +133,6 @@
       "id": "2",
       "nombre": "Inglés",
       "progreso": "70"
-    },
-    {
-      "id": 3,
-      "nombre": "ALgo",
-      "progreso": 55
     }
   ]
 }

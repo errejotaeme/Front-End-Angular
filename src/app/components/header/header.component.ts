@@ -1,4 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Persona } from 'src/app/interfaces/persona';
 
 
 
@@ -9,13 +11,20 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  datosPersona:Persona[] = [];
+
   tema: boolean = false;
   clase: string = "";
   cambiar:string = "fas fa-moon"
 
-  constructor(private renderer: Renderer2) { }
+  constructor(
+    private renderer: Renderer2,
+    private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
+    this.datosPortfolio.obtenerDatos('persona').subscribe(data => {
+      this.datosPersona=data;
+    });
   }
 
 
@@ -33,7 +42,7 @@ export class HeaderComponent implements OnInit {
     }
 
   mostrarCorreo(){
-    alert("rodriguezjuanma89@outlook.com")
+    alert(this.datosPersona[0].email)
   }
 
 }

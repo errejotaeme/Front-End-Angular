@@ -1,5 +1,7 @@
 <div class="container seccion">
 
+  <h2 class="titulo-seccion" id="seccion-experiencia">EXPERIENCIA LABORAL</h2>
+
   <app-boton
     claseBoton="boton-agregar"
     (btnClick)="modalAgregar()"
@@ -7,8 +9,6 @@
     titulo="Agregar nuevas experiencias laborales"
     icono="fas fa-plus"
   ></app-boton>
-
-  <h2 class="titulo-seccion" id="seccion-experiencia">EXPERIENCIA LABORAL</h2>
 
       <div *ngIf ="agregarItem == true">
         <app-agregar-experiencia
@@ -24,5 +24,4 @@
         (borrarDatos)="eliminar($event)"
       ></app-experiencia-item>
     </div>
-
 </div>

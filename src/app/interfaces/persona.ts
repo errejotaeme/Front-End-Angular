@@ -1,5 +1,6 @@
 export interface Persona {
-  id: string;
+  id: number;
+  email: string;
   nombre: string;
   banner: string;
   foto: string;

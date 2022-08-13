@@ -1,5 +1,5 @@
 export interface Educacion {
-  id: string;
+  id: number;
   comentario: string;
   escuela: string;
   fin: string;
