@@ -23,7 +23,6 @@ export class ModalEliminarComponent implements OnInit {
   eliminarObjeto() {
     const borrar = this.objetoAEliminar;
     this.eliminarRegistro.emit(borrar);
-    alert("Se han eliminado los datos. Actualice el navegador para ver los cambios.")
     this.cerrarModal();
   }
 

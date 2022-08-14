@@ -19,7 +19,7 @@ export class IniciarSesionComponent implements OnInit {
       this.formulario = this.formBuilder.group(
         {
           usuario : ['', [Validators.required]],
-          password: ['', [Validators.required, Validators.minLength(8)]],
+          clave: ['', [Validators.required, Validators.minLength(8)]],
           deviceInfo:this.formBuilder.group({
             deviceId: ["123456"],
             deviceType: ["ANDROID"],
@@ -36,8 +36,8 @@ export class IniciarSesionComponent implements OnInit {
     return this.formulario.get('usuario');
   }
 
-  get Password(){
-    return this.formulario.get('password');
+  get Clave(){
+    return this.formulario.get('clave');
   }
 
   enviar(event:Event){

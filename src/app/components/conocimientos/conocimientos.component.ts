@@ -27,7 +27,10 @@ export class ConocimientosComponent implements OnInit {
   }
 
   eliminar(borrar:Conocimiento){
-    this.datosPortfolio.borrarDatos(borrar, "conocimientos").subscribe()
+    this.datosPortfolio.borrarDatos(borrar, "conocimientos").subscribe(Response =>{
+      alert(Response);
+      location.reload();
+    });
   }
 
 }

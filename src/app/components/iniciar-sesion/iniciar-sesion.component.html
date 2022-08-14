@@ -13,14 +13,14 @@
   </div>
 
   <div class="form-group input-inicio">
-    <label for="pass">Contraseña:</label>
-    <input type="password" class="form-control campo-formulario" id="password" formControlName="password" placeholder="Ingresar contraseña"
-    [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
-    <div *ngIf="Password?.errors && Password?.touched">
-      <p *ngIf="Password?.hasError('required')" class="text-danger">
+    <label for="clave">Contraseña:</label>
+    <input type="clave" class="form-control campo-formulario" id="clave" formControlName="clave" placeholder="Ingresar contraseña"
+    [ngClass]="{'is-invalid': Clave?.errors && Clave?.touched, 'is-valid': !Clave?.errors && Clave?.touched}">
+    <div *ngIf="Clave?.errors && Clave?.touched">
+      <p *ngIf="Clave?.hasError('required')" class="text-danger">
         Debe ingresar una contraseña.
       </p>
-      <p *ngIf="Password?.hasError('minlength')" class="text-danger">
+      <p *ngIf="Clave?.hasError('minlength')" class="text-danger">
         La contraseña debe ser de 8 o más caracteres.
       </p>
     </div>

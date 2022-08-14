@@ -51,9 +51,11 @@ export class EditarConocimientosComponent implements OnInit {
   enviar(event:Event){
     event.preventDefault;
     const form:Conocimiento = this.formulario.value;
-    this.datosPortfolio.actualizarDatos(form, "conocimientos").subscribe();
-    alert("Se han editado los datos. Actualice el navegador para ver correctamente los cambios.");
-    this.cerrarModal();
+    this.datosPortfolio.actualizarDatos(form, "conocimientos").subscribe(Response =>{
+      alert(Response);
+      this.cerrarModal();
+      location.reload();
+    });
   }
 
 }
