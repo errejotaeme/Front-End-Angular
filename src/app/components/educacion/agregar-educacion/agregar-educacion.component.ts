@@ -58,9 +58,11 @@ export class AgregarEducacionComponent implements OnInit {
     enviarRegistro(event: Event) {
       event.preventDefault;
       const form: Educacion = this.formulario.value;
-      this.datosPortfolio.agregarRegistro(form, "educacion").subscribe();
-      alert("Se ha creado un nuevo registro. Actualice el navegador para ver correctamente los cambios.");
-      this.cerrarModal();
+      this.datosPortfolio.agregarRegistro(form, "educacion").subscribe(Response =>{
+        alert(Response);
+        this.cerrarModal();
+        location.reload();
+      });
     }
 
 }

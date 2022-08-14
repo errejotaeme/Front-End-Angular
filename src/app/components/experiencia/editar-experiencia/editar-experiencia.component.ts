@@ -71,9 +71,11 @@ export class EditarExperienciaComponent implements OnInit {
   enviar(event:Event){
     event.preventDefault;
     const form:Experiencia = this.formulario.value;
-    this.datosPortfolio.actualizarDatos(form, "experiencias").subscribe();
-    alert("Se han editado los datos. Actualice el navegador para ver correctamente los cambios.");
-    this.cerrarModal();
+    this.datosPortfolio.actualizarDatos(form, "experiencias").subscribe(Response =>{
+      alert(Response);
+      this.cerrarModal();
+      location.reload();
+    });
   }
 
 }

@@ -4,6 +4,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Conocimiento } from 'src/app/interfaces/conocimiento';
 
 
+
 @Component({
   selector: 'app-agregar-conocimiento',
   templateUrl: './agregar-conocimiento.component.html',

@@ -26,7 +26,10 @@ export class EducacionComponent implements OnInit {
   }
 
   eliminar(borrar:Educacion){
-    this.datosPortfolio.borrarDatos(borrar, "educacion").subscribe()
+    this.datosPortfolio.borrarDatos(borrar, "educacion").subscribe(Response =>{
+      alert(Response);
+      location.reload();
+    });
   }
 
 }

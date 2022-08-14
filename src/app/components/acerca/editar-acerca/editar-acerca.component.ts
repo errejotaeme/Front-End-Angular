@@ -71,9 +71,11 @@ export class EditarAcercaComponent implements OnInit {
   enviar(event:Event){
     event.preventDefault;
     const form:Persona = this.formulario.value;
-    this.datosPortfolio.actualizarDatos(form, "persona").subscribe();
-    alert("Se han editado los datos. Actualice el navegador para ver correctamente los cambios.");
-    this.cerrarModal();
+    this.datosPortfolio.actualizarDatos(form, "persona").subscribe(Response =>{
+      alert(Response);
+      this.cerrarModal();
+      location.reload();
+    });
   }
 
 }

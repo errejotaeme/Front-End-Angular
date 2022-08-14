@@ -27,7 +27,10 @@ export class ExperienciaComponent implements OnInit {
   }
 
   eliminar(borrar:Experiencia){
-    this.datosPortfolio.borrarDatos(borrar, "experiencias").subscribe()
+    this.datosPortfolio.borrarDatos(borrar, "experiencias").subscribe(Response =>{
+      alert(Response);
+      location.reload();
+    });
   }
 
 }

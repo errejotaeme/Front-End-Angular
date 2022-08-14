@@ -67,9 +67,11 @@ export class EditarEducacionComponent implements OnInit {
   enviar(event:Event){
     event.preventDefault;
     const form:Educacion = this.formulario.value;
-    this.datosPortfolio.actualizarDatos(form, "educacion").subscribe();
-    alert("Se han editado los datos. Actualice el navegador para ver correctamente los cambios.");
-    this.cerrarModal();
+    this.datosPortfolio.actualizarDatos(form, "educacion").subscribe(Response =>{
+      alert(Response);
+      this.cerrarModal();
+      location.reload();
+    });
   }
 
 }
