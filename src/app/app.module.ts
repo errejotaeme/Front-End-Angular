@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule} from '@angular/forms';
 
@@ -30,6 +30,7 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
 import { AgregarConocimientoComponent } from './components/conocimientos/agregar-conocimiento/agregar-conocimiento.component';
 import { AgregarEducacionComponent } from './components/educacion/agregar-educacion/agregar-educacion.component';
 import { AgregarExperienciaComponent } from './components/experiencia/agregar-experiencia/agregar-experiencia.component';
+import { InterceptorService } from './servicios/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { AgregarExperienciaComponent } from './components/experiencia/agregar-ex
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [PortfolioService],
+  providers: [PortfolioService,
+            { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

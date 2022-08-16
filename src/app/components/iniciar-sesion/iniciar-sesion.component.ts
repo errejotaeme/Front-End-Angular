@@ -19,12 +19,7 @@ export class IniciarSesionComponent implements OnInit {
       this.formulario = this.formBuilder.group(
         {
           usuario : ['', [Validators.required]],
-          clave: ['', [Validators.required, Validators.minLength(8)]],
-          deviceInfo:this.formBuilder.group({
-            deviceId: ["123456"],
-            deviceType: ["ANDROID"],
-            notificationToken:["987dddd789"]
-          })
+          clave: ['', [Validators.required, Validators.minLength(8)]]
         }
       );
   }
@@ -41,10 +36,11 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   enviar(event:Event){
-    event.preventDefault;  //cancela el curso normal del submit
+    event.preventDefault;
     this.autenticacionService.iniciarSesion(this.formulario.value).subscribe(data=>{
-      console.log("DATA: " + JSON.stringify(data));
+      console.log("DATA: RESPUESTA RECIBIDA EN CONTROLADOR INICIO SECION DESDE LA SUBSCRIPCION: " + JSON.stringify(data));
       this.ruta.navigate(['/portfolio']);
+      console.log("Deberia redirigirme al portfolio...");
     })
   }
 }

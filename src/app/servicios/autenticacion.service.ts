@@ -1,25 +1,36 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, map } from 'rxjs';
+
+const httpOptions = {
+  headers: new HttpHeaders({'Content-Type':'application/json'}),
+  responseType: 'json' as const
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class AutenticacionService {
 
-  url='(url de la api)';
+  url='http://localhost:8080/acceso';
   currentUserSubject:BehaviorSubject<any>;
 
   constructor(private http:HttpClient) {
-    console.log("Anda!");                                                 //inf de sesion almacenada json
+    console.log("AutenticationService se construyo correctamente");                                                                 //token        o   json vacio
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
-  }                                                         //BehSubj almacena el ESTADO
+  }
 
   iniciarSesion(credenciales:any):Observable<any> {
-    return this.http.post(this.url, credenciales).pipe(map(data=>{ //modifica respuesta de la api antes de pasarla componente
+    return this.http.post(this.url, credenciales, httpOptions).pipe(map(data=>{
       sessionStorage.setItem('currentUser', JSON.stringify(data));
+      this.currentUserSubject.next(data);
+      console.log("currentUser seteado: " + JSON.stringify(data));
       return data;
     }))
   }
 
-}/*DEBO RECIBIR UN TOKEN!!!!*/
+  get usuarioAutenticado(){
+    return this.currentUserSubject.value;
+  }
+
+}

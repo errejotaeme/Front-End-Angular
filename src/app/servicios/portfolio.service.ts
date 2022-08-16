@@ -3,16 +3,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':'application/json',
-  }),responseType: 'text' as 'json'
+  headers: new HttpHeaders({'Content-Type':'application/json'}),
+  responseType: 'text' as 'json'
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiUrl = 'http://localhost:8080'; //era 3000
+  private apiUrl:string = 'http://localhost:8080';
 
   constructor(private http:HttpClient) { }
 
@@ -38,4 +37,3 @@ export class PortfolioService {
   }
 }
 
-/*DEBO UTILIZAR INTERCEPTOR PARA QUE LE AGREGUE EL TOKEN AL ENCABEZADO DEL MENSAJE ANTES DE HACER LA LLAMADA A LA API*/
