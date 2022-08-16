@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Persona } from 'src/app/interfaces/persona';
+import { Router } from '@angular/router';
 
 
 
@@ -19,14 +20,14 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private renderer: Renderer2,
-    private datosPortfolio: PortfolioService) { }
+    private datosPortfolio: PortfolioService,
+    private ruta:Router) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos('persona').subscribe(data => {
       this.datosPersona=data;
     });
   }
-
 
   alternarTemaColor(){
      if(this.tema == false){
@@ -43,6 +44,13 @@ export class HeaderComponent implements OnInit {
 
   mostrarCorreo(){
     alert(this.datosPersona[0].email)
+  }
+
+  cerrarSesion(){
+    alert("Se ha cerrado la sesión. Para acceder al portfolio debe autenticarse.")
+    sessionStorage.clear();
+    location.reload();
+    this.ruta.navigate(['/iniciar-sesion']);
   }
 
 }

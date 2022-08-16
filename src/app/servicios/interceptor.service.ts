@@ -23,7 +23,6 @@ export class InterceptorService implements HttpInterceptor {
         }
       })
     }
-    console.log("Interceptor funciona. Valor del objeto: " + JSON.stringify(currentUser))
     return next.handle(req);
   }
 }

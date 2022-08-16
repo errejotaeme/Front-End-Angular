@@ -16,7 +16,6 @@ export class AutenticacionService {
   currentUserSubject:BehaviorSubject<any>;
 
   constructor(private http:HttpClient) {
-    console.log("AutenticationService se construyo correctamente");                                                                 //token        o   json vacio
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
   }
 
@@ -24,7 +23,6 @@ export class AutenticacionService {
     return this.http.post(this.url, credenciales, httpOptions).pipe(map(data=>{
       sessionStorage.setItem('currentUser', JSON.stringify(data));
       this.currentUserSubject.next(data);
-      console.log("currentUser seteado: " + JSON.stringify(data));
       return data;
     }))
   }
