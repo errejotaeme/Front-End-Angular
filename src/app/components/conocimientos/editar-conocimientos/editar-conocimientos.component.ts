@@ -48,8 +48,7 @@ export class EditarConocimientosComponent implements OnInit {
     return this.formulario.get('progreso');
   }
 
-  enviar(event:Event){
-    event.preventDefault;
+  enviar(){
     const form:Conocimiento = this.formulario.value;
     this.datosPortfolio.actualizarDatos(form, "conocimientos").subscribe(Response =>{
       alert(Response);

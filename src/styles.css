@@ -62,7 +62,7 @@ body.tema-oscuro {
   max-width:33vw;
   overflow-x: auto;
   height: fit-content;
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   margin-top:2vh;
   margin-right:0.7rem ;
   background: linear-gradient(315deg, rgba(0, 0, 0, 0.267), rgba(255, 255, 255, 0.127) );

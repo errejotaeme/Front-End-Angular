@@ -68,8 +68,7 @@ export class EditarExperienciaComponent implements OnInit {
     return this.formulario.get('modalidad');
   }
 
-  enviar(event:Event){
-    event.preventDefault;
+  enviar(){
     const form:Experiencia = this.formulario.value;
     this.datosPortfolio.actualizarDatos(form, "experiencias").subscribe(Response =>{
       alert(Response);

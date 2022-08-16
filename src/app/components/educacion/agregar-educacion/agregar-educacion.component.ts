@@ -55,8 +55,7 @@ export class AgregarEducacionComponent implements OnInit {
       return this.formulario.get('titulo');
     }
 
-    enviarRegistro(event: Event) {
-      event.preventDefault;
+    enviarRegistro() {
       const form: Educacion = this.formulario.value;
       this.datosPortfolio.agregarRegistro(form, "educacion").subscribe(Response =>{
         alert(Response);

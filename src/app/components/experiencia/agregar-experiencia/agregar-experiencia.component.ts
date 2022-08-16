@@ -58,8 +58,7 @@ export class AgregarExperienciaComponent implements OnInit {
       return this.formulario.get('modalidad');
     }
 
-    enviarRegistro(event: Event) {
-      event.preventDefault;
+    enviarRegistro() {
       const form: Experiencia = this.formulario.value;
       this.datosPortfolio.agregarRegistro(form, "experiencias").subscribe(Response =>{
         alert(Response);

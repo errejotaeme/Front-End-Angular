@@ -64,8 +64,7 @@ export class EditarEducacionComponent implements OnInit {
     return this.formulario.get('titulo');
   }
 
-  enviar(event:Event){
-    event.preventDefault;
+  enviar(){
     const form:Educacion = this.formulario.value;
     this.datosPortfolio.actualizarDatos(form, "educacion").subscribe(Response =>{
       alert(Response);

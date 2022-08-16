@@ -68,8 +68,7 @@ export class EditarAcercaComponent implements OnInit {
     return this.formulario.get('descripcion');
   }
 
-  enviar(event:Event){
-    event.preventDefault;
+  enviar(){
     const form:Persona = this.formulario.value;
     this.datosPortfolio.actualizarDatos(form, "persona").subscribe(Response =>{
       alert(Response);
