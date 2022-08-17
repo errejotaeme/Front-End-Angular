@@ -3,7 +3,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, map } from 'rxjs';
 
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type':'application/json'}),
+  headers: new HttpHeaders({
+    'Content-Type':'application/json',
+    'Access-Control-Allow-Origin:': 'https://front-portfolio-angular.web.app'}),
   responseType: 'json' as const
 }
 
