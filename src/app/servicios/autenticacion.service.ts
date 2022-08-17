@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, map } from 'rxjs';
 
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type':'text/plain'}),
+  headers: new HttpHeaders({'Content-Type':'application/json'}),
   responseType: 'json' as const
 }
 
