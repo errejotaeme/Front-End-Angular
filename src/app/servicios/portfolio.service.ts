@@ -4,8 +4,7 @@ import { Observable } from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':'application/json',
-    'Access-Control-Allow-Origin:': 'https://front-portfolio-angular.web.app'}),
+    'Content-Type':'application/json'}),
   responseType: 'text' as 'json'
 }
 

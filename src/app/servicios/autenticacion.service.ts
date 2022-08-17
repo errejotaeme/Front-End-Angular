@@ -4,8 +4,7 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':'application/json',
-    'Access-Control-Allow-Origin:': 'https://front-portfolio-angular.web.app'}),
+    'Content-Type':'application/json'}),
   responseType: 'json' as const
 }
 
@@ -22,7 +21,8 @@ export class AutenticacionService {
   }
 
   iniciarSesion(credenciales:any):Observable<any> {
-    return this.http.post(this.url, credenciales, httpOptions).pipe(map(data=>{
+    const salida = JSON.stringify(credenciales);
+    return this.http.post(this.url, salida, httpOptions).pipe(map(data=>{
       sessionStorage.setItem('currentUser', JSON.stringify(data));
       this.currentUserSubject.next(data);
       return data;
