@@ -1,12 +1,14 @@
 <div class="caja-edicion">
   <span class="indice-item">{{experiencia.id}}</span>
 
-  <app-boton
-    claseBoton="boton-edicion"
-    (btnClick)="modalEdicion()"
-    icono="fas fa-pencil-alt"
-    titulo="Editar"
-  ></app-boton>
+  <div *ngIf ="logeado == true">
+    <app-boton
+      claseBoton="boton-edicion"
+      (btnClick)="modalEdicion()"
+      icono="fas fa-pencil-alt"
+      titulo="Editar"
+    ></app-boton>
+  </div>
 
   <span class="campo">Puesto:</span><p class="contenido">{{experiencia.posicion}}</p>
   <span class="campo">Empresa:</span><p class="contenido">{{experiencia.empresa}}</p>
@@ -15,12 +17,14 @@
   <span class="campo">Desde:</span><p class="contenido">{{experiencia.inicio}}</p>
   <span class="campo">Hasta:</span><p class="contenido">{{experiencia.fin}}</p>
 
+  <div *ngIf ="logeado == true">
   <app-boton
     claseBoton="boton-edicion"
     (btnClick)="modalEliminar()"
     icono="fa-solid fa-delete-left"
     titulo="Eliminar"
   ></app-boton>
+  </div>
 
   <div *ngIf ="editarItem == true">
     <app-editar-experiencia

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Conocimiento } from 'src/app/interfaces/conocimiento';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-conocimiento-item',
@@ -15,11 +16,22 @@ export class ConocimientoItemComponent implements OnInit {
   editarItem:boolean = false;
   eliminarItem:boolean = false;
   progreso: number = 0;
+  logeado:boolean = false;
 
-  constructor() { }
+  constructor(private autenticacion: AutenticacionService) { }
 
   ngOnInit(): void {
     this.progreso = Number(this.conocimiento.progreso);
+    this.manejoSesion();
+  }
+
+  manejoSesion(){
+    let currentUser = this.autenticacion.usuarioAutenticado;
+      if(currentUser && currentUser.accesToken) {
+        this.logeado = true;
+      } else {
+        this.logeado = false;
+      }
   }
 
   modalEdicion(){

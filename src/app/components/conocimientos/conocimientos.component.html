@@ -2,13 +2,15 @@
 
   <h2 class="titulo-seccion" id="seccion-conocimientos">CONOCIMIENTOS</h2>
 
-  <app-boton
-    claseBoton="boton-agregar"
-    (btnClick)="modalAgregar()"
-    texto=""
-    titulo="Agregar nuevos conocimientos"
-    icono="fas fa-plus"
-  ></app-boton>
+  <div *ngIf ="logeado == true">
+    <app-boton
+      claseBoton="boton-agregar"
+      (btnClick)="modalAgregar()"
+      texto=""
+      titulo="Agregar nuevos conocimientos"
+      icono="fas fa-plus"
+    ></app-boton>
+  </div>
 
   <div *ngIf ="agregarItem == true">
     <app-agregar-conocimiento

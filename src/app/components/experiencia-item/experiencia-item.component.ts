@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Experiencia } from 'src/app/interfaces/experiencia';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
+
 
 @Component({
   selector: 'app-experiencia-item',
@@ -13,10 +15,21 @@ export class ExperienciaItemComponent implements OnInit {
 
   editarItem:boolean = false;
   eliminarItem:boolean = false;
+  logeado:boolean = false;
 
-  constructor() { }
+  constructor(private autenticacion: AutenticacionService) { }
 
   ngOnInit(): void {
+    this.manejoSesion();
+  }
+
+  manejoSesion(){
+    let currentUser = this.autenticacion.usuarioAutenticado;
+      if(currentUser && currentUser.accesToken) {
+        this.logeado = true;
+      } else {
+        this.logeado = false;
+      }
   }
 
   modalEdicion(){

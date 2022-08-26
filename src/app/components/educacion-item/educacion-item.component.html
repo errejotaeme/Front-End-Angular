@@ -1,12 +1,14 @@
 <div class="caja-edicion">
   <span class="indice-item">{{educacion.id}}</span>
 
+  <div *ngIf ="logeado == true">
     <app-boton
       claseBoton="boton-edicion"
       (btnClick)="modalEdicion()"
       icono="fas fa-pencil-alt"
       titulo="Editar"
     ></app-boton>
+    </div>
 
     <span class="campo">Institución:</span><p class="contenido">{{educacion.escuela}}</p>
     <span class="campo">Título/Curso:</span><p class="contenido">{{educacion.titulo}}</p>
@@ -14,12 +16,14 @@
     <span class="campo">Fecha de inicio:</span><p class="contenido">{{educacion.inicio}}</p>
     <span class="campo">Finalizado:</span><p class="contenido">{{educacion.fin}}</p>
 
+    <div *ngIf ="logeado == true">
     <app-boton
       claseBoton="boton-edicion"
       (btnClick)="modalEliminar()"
       icono="fa-solid fa-delete-left"
       titulo="Eliminar"
     ></app-boton>
+    </div>
 
     <div *ngIf ="editarItem == true">
       <app-editar-educacion

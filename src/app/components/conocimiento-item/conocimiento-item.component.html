@@ -1,12 +1,14 @@
 <div class="caja-edicion marco-conocimiento">
   <span class="indice-item">{{conocimiento.id}}</span>
 
-    <app-boton
-      claseBoton="boton-edicion"
-      (btnClick)="modalEdicion()"
-      icono="fas fa-pencil-alt"
-      titulo="Editar"
-    ></app-boton>
+    <div *ngIf ="logeado == true">
+      <app-boton
+        claseBoton="boton-edicion"
+        (btnClick)="modalEdicion()"
+        icono="fas fa-pencil-alt"
+        titulo="Editar"
+      ></app-boton>
+    </div>
 
     <p class="contenido">{{conocimiento.nombre}}</p>
 
@@ -14,12 +16,14 @@
       porcentaje="{{progreso}}"
     ></app-progreso-circular>
 
+    <div *ngIf ="logeado == true">
     <app-boton
       claseBoton="boton-edicion"
       (btnClick)="modalEliminar()"
       icono="fa-solid fa-delete-left"
       titulo="Eliminar"
     ></app-boton>
+    </div>
 
     <div *ngIf ="editarItem == true">
       <app-editar-conocimientos
